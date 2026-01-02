@@ -6,7 +6,7 @@
     body { font-family: 'Iansui', 'Microsoft JhengHei', sans-serif; font-size: 100%; margin: 0; padding: 0; display: flex; flex-direction: column; min-height: 100vh; }
     .access-key { color: #666; text-decoration: none; font-size: 0.9em; padding: 5px; cursor: help; }
     .access-key:focus { outline: 2px solid blue; color: #000; }
-    .header { background: #fff; padding: 10px 20px; border-bottom: 5px solid #6A5ACD; display: flex; justify-content: space-between; align-items: center; position: relative; }
+    .header { background: #fff; padding: 10px 20px; border-bottom: 5px solid #000000; display: flex; justify-content: space-between; align-items: center; position: relative; }
     .header-left { display: flex; align-items: center; flex-wrap: wrap; }
     .logo-link { display: flex; align-items: center; text-decoration: none; color: inherit; flex-wrap: wrap; position: relative; }
     .logo-link:hover { opacity: 0.8; }
@@ -16,12 +16,12 @@
     .school-title-en { font-size: 1.25em; color: #666; display: block; }
     .header-right { display: flex; align-items: center; gap: 10px; }
     .header-btn { text-decoration: none; color: #555; font-weight: bold; font-size: 1.1em; display: flex; align-items: center; padding: 5px 10px; border-radius: 5px; transition: background 0.3s; cursor: pointer; white-space: nowrap; position: relative; }
-    .header-btn:hover { background-color: #f0f8ff; color: #6A5ACD; }
+    .header-btn:hover { background-color: #f0f8ff; color: #000000; }
     .search-header { display: flex; align-items: center; border: 1px solid #ccc; border-radius: 20px; padding: 2px 5px; background: #fff; height: 36px; }
     .search-header input { border: none; outline: none; padding: 0 10px; font-size: 1em; width: 150px; background: transparent; }
-    .search-header button { background: none; border: none; cursor: pointer; font-size: 1.1em; color: #6A5ACD; padding: 0 8px; display: flex; align-items: center; }
+    .search-header button { background: none; border: none; cursor: pointer; font-size: 1.1em; color: #000000; padding: 0 8px; display: flex; align-items: center; }
     .search-header button:hover { color: #000; }
-    .navbar { background-color: #6A5ACD; }
+    .navbar { background-color: #000000; }
     .nav-container { max-width: 100%; margin: 0 auto; padding: 0 10px; }
     .nav-menu { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
     .nav-item { position: relative; }
@@ -37,7 +37,7 @@
     .dropdown-content a:hover { background-color: #ddd; }
     .nav-item:hover .dropdown-content { display: block; }
     .nav-item:focus-within .dropdown-content { display: block; }
-    .hamburger { display: none; background: none; border: none; color: #6A5ACD; font-size: 2.5em; cursor: pointer; position: absolute; top: 15px; right: 20px; }
+    .hamburger { display: none; background: none; border: none; color: #000000; font-size: 2.5em; cursor: pointer; position: absolute; top: 15px; right: 20px; }
     .mobile-only { display: none; }
     .banner-container { width: 100%; max-width: 100%; margin: 0 auto; padding-top: 10px; }
     .banner-img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 400px; }
@@ -70,15 +70,35 @@
     .block-card > *:last-child { margin-bottom: 0 !important; }
     h2.block-title { font-size: 1.5em; border-bottom: 2px solid #ccc; padding-bottom: 0.1em; margin-bottom: 8px; margin-top: 0; }
     
+    /* 提示文字 Tooltip 樣式 */
     [data-title] { position: relative; }
     [data-title]:hover::after { content: attr(data-title); position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background-color: #fff; color: #333; border: 1px solid #ccc; box-shadow: 0 4px 10px rgba(0,0,0,0.2); padding: 6px 12px; border-radius: 4px; white-space: nowrap; font-size: 0.9em; z-index: 99999; pointer-events: none; margin-top: 8px; }
     [data-title]:hover::before { content: ''; position: absolute; top: 100%; left: 50%; margin-left: -6px; margin-top: -4px; border-width: 6px; border-style: solid; border-color: transparent transparent #fff transparent; z-index: 99999; }
     
-    .link-list-item { display: block; text-decoration: none; color: #333; background-color: #fff; border: 1px solid #ddd; padding: 10px 15px; margin-bottom: 5px; border-radius: 5px; transition: all 0.2s ease; font-size: 1.1em; line-height: 1.4; position: relative; }
-    .link-list-item:hover { background-color: #f9f9f9; border-color: #bbb; color: #6A5ACD; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transform: translateY(-1px); }
+    /* ★★★ 修改重點：針對文字連結的層級修正 ★★★ */
+    .link-list-item { 
+        display: block; text-decoration: none; color: #333; background-color: #fff; border: 1px solid #ddd; 
+        padding: 10px 15px; margin-bottom: 5px; border-radius: 5px; transition: all 0.2s ease; 
+        font-size: 1.1em; line-height: 1.4; position: relative; 
+    }
+    .link-list-item:hover { 
+        background-color: #f9f9f9; border-color: #bbb; color: #000000; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); transform: translateY(-1px);
+        z-index: 1000; /* 新增：讓文字連結在滑鼠移入時浮到最上層，避免提示文字被遮擋 */
+    }
     
-    a.img-link { display: block; text-align: center; margin-bottom: 5px; text-decoration: none; border: 1px solid #eee; padding: 5px; border-radius: 5px; transition: transform 0.2s; position: relative; overflow: hidden; }
-    a.img-link:hover { transform: scale(1.02); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .single-link { display: block; text-decoration: none; color: #333; background-color: #fff; border: 1px solid #ddd; padding: 12px 15px; border-radius: 5px; transition: all 0.2s; }
+    .single-link:hover { background-color: #f9f9f9; color: #000000; border-color: #000000; }
+    
+    a.img-link { 
+        display: block; text-align: center; margin-bottom: 5px; text-decoration: none; border: 1px solid #eee; padding: 5px; border-radius: 5px; 
+        transition: transform 0.2s; position: relative; overflow: visible; 
+    }
+    a.img-link:hover { 
+        transform: scale(1.02); box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        z-index: 1000; /* 讓圖片連結也能浮到最上層 */
+    }
+    
     a.img-link img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
     .img-caption { position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(0, 0, 0, 0.8); color: #fff; padding: 5px; text-align: center; font-size: 1em; opacity: 0; transition: opacity 0.2s; pointer-events: none; z-index: 10; }
     a.img-link:hover .img-caption { opacity: 1; }
@@ -89,65 +109,22 @@
     
 /* Carousel (RWD 修正版 V3 - 強力 Hover 隱藏版) */
     .carousel-container { position: relative; max-width: 100%; margin: auto; overflow: hidden; border-radius: 5px; min-height: 200px; }
-    
-    /* 預設隱藏捲軸 */
-    .carousel-list {
-        display: flex; 
-        overflow-x: auto; 
-        scroll-snap-type: x mandatory; 
-        list-style: none; 
-        padding: 0; 
-        margin: 0;
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none;  /* IE 10+ */
-    }
-    .carousel-list::-webkit-scrollbar { display: none; /* Chrome/Safari */ }
+    .carousel-list { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; list-style: none; padding: 0; margin: 0; scrollbar-width: none; -ms-overflow-style: none; }
+    .carousel-list::-webkit-scrollbar { display: none; }
 
-    /* 預設手機版: 100% 寬度 */
-    .carousel-item { 
-        flex: 0 0 100%; 
-        width: 100%;
-        scroll-snap-align: start; 
-        box-sizing: border-box; 
-        padding: 5px;
-        position: relative; /* 關鍵：讓絕對定位的標題可以參考此容器 */
-    }
+    .carousel-item { flex: 0 0 100%; width: 100%; scroll-snap-align: start; box-sizing: border-box; padding: 5px; position: relative; }
 
-    /* 電腦版 3 欄: 33.2% 寬度 (微調以避免捲軸) */
-    @media (min-width: 901px) {
-        .carousel-container.cols-3 .carousel-item { 
-            flex: 0 0 33.2%; 
-            width: 33.2%; 
-        }
-    }
+    @media (min-width: 901px) { .carousel-container.cols-3 .carousel-item { flex: 0 0 33.2%; width: 33.2%; } }
 
-    /* --- 修改重點：強制隱藏並在 Hover 時顯示 --- */
-    /* 使用 !important 覆蓋原本在 HTML 裡的 inline style */
     .carousel-item .carousel-caption { 
-        position: absolute !important; 
-        bottom: 0 !important; 
-        left: 0 !important; 
-        width: 100% !important; 
-        background: rgba(0, 0, 0, 0.7) !important; /* 半透明黑色背景 */
-        color: #fff !important; /* 白色文字 */
-        padding: 10px !important; 
-        font-size: 1.1em !important; 
-        margin: 0 !important;
-        opacity: 0 !important; /* 強制預設透明度為 0 (隱藏) */
-        transition: opacity 0.3s ease-in-out !important; 
-        pointer-events: none; /* 避免文字區塊擋住圖片點擊 */
-        z-index: 10;
-        box-sizing: border-box;
-        text-align: center !important; /* ★★★ 新增：文字置中 ★★★ */
+        position: absolute !important; bottom: 0 !important; left: 0 !important; width: 100% !important; 
+        background: rgba(0, 0, 0, 0.7) !important; color: #fff !important; padding: 10px !important; 
+        font-size: 1.1em !important; margin: 0 !important; opacity: 0 !important; 
+        transition: opacity 0.3s ease-in-out !important; pointer-events: none; z-index: 10; box-sizing: border-box; text-align: center !important;
     }
 
-    /* 當滑鼠移到圖片或項目上時，文字強制浮現 */
-    .carousel-item:hover .carousel-caption,
-    .carousel-item:focus-within .carousel-caption { 
-        opacity: 1 !important; 
-    }
+    .carousel-item:hover .carousel-caption, .carousel-item:focus-within .carousel-caption { opacity: 1 !important; }
 
-    /* 控制按鈕 */
     .control-btn { cursor: pointer; position: absolute; top: 50%; width: auto; padding: 6px 12px; margin-top: -20px; color: white; font-weight: bold; font-size: 1em; transition: 0.6s ease; border: none; user-select: none; background-color: rgba(0,0,0,0.3); text-decoration: none; z-index: 101; }
     .control-btn:hover, .control-btn:focus { background-color: rgba(0,0,0,0.8); outline: 2px solid yellow; }
     .prev { left: 0; border-radius: 0 3px 3px 0; } .next { right: 0; border-radius: 3px 0 0 3px; }
@@ -160,30 +137,28 @@
 
     /* Marquee & Accordion (保留不變) */
     .marquee-container { position: relative; overflow: hidden; background: #fff; border: 1px solid #ddd; border-radius: 5px; padding: 5px 5px 5px 90px; display: flex; align-items: center; height: 40px; }
-    .marquee-controls { position: absolute; left: 0; top: 0; bottom: 0; width: 85px; background: #fff; color: #6A5ACD; z-index: 10; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; border-right: 1px solid #eee; }
-    .marquee-btn { background: #fff; border: 1px solid #6A5ACD; color: #6A5ACD; cursor: pointer; font-size: 0.8em; padding: 2px 5px; margin-left: 5px; border-radius: 3px; }
-    .marquee-btn:hover, .marquee-btn:focus { background: #6A5ACD; color: #fff; outline: 2px solid yellow; }
+    .marquee-controls { position: absolute; left: 0; top: 0; bottom: 0; width: 85px; background: #fff; color: #000000; z-index: 10; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; border-right: 1px solid #eee; }
+    .marquee-btn { background: #fff; border: 1px solid #000000; color: #000000; cursor: pointer; font-size: 0.8em; padding: 2px 5px; margin-left: 5px; border-radius: 3px; }
+    .marquee-btn:hover, .marquee-btn:focus { background: #000000; color: #fff; outline: 2px solid yellow; }
     .marquee-content-wrapper { width: 100%; overflow: hidden; }
     .marquee-track { white-space: nowrap; display: inline-block; animation: marquee-scroll 25s linear infinite; padding-left: 100%; }
     .marquee-paused .marquee-track, .marquee-track:hover, .marquee-track:focus-within { animation-play-state: paused; }
     .marquee-item { display: inline-block; margin-right: 40px; font-size: 1.1em; color: #333; text-decoration: none; vertical-align: middle; position: relative; }
-    .marquee-item:hover, .marquee-item:focus { color: #6A5ACD; text-decoration: underline; outline: 2px solid blue; }
+    .marquee-item:hover, .marquee-item:focus { color: #000000; text-decoration: underline; outline: 2px solid blue; }
     .marquee-item::before { content: '📢 '; margin-right: 3px; }
     @keyframes marquee-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
 
     .link-list-container { list-style: none; padding: 0; margin: 0; }
     .link-list-entry { margin-bottom: 5px; }
-    .single-link { display: block; text-decoration: none; color: #333; background-color: #fff; border: 1px solid #ddd; padding: 12px 15px; border-radius: 5px; transition: all 0.2s; }
-    .single-link:hover { background-color: #f9f9f9; color: #6A5ACD; border-color: #6A5ACD; }
     .accordion-btn { width: 100%; background-color: #fff; color: #333; cursor: pointer; padding: 12px 15px; border: 1px solid #ddd; border-radius: 5px; text-align: left; outline: none; font-size: 1.1em; font-family: inherit; display: flex; justify-content: space-between; align-items: center; transition: 0.2s; }
-    .accordion-btn:hover, .accordion-btn:focus { background-color: #f0f8ff; color: #6A5ACD; border-color: #6A5ACD; outline: 2px solid yellow; }
-    .accordion-btn[aria-expanded="true"] { background-color: #6A5ACD; color: #fff; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+    .accordion-btn:hover, .accordion-btn:focus { background-color: #f0f8ff; color: #000000; border-color: #000000; outline: 2px solid yellow; }
+    .accordion-btn[aria-expanded="true"] { background-color: #000000; color: #fff; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
     .accordion-btn[aria-expanded="true"] .acc-icon { transform: rotate(180deg); }
     .acc-icon { transition: transform 0.3s ease; font-size: 0.8em; }
     .accordion-panel { padding: 0; background-color: #fafafa; border: 1px solid #ddd; border-top: none; border-radius: 0 0 5px 5px; list-style: none; margin: 0; }
     .accordion-panel[hidden] { display: none; }
     .sub-link-item a { display: block; padding: 10px 15px 10px 30px; text-decoration: none; color: #555; border-bottom: 1px dashed #eee; transition: 0.2s; position: relative; }
-    .sub-link-item a:hover, .sub-link-item a:focus { background-color: #eee; color: #6A5ACD; padding-left: 35px; outline: 2px solid yellow; }
+    .sub-link-item a:hover, .sub-link-item a:focus { background-color: #eee; color: #000000; padding-left: 35px; outline: 2px solid yellow; }
     .sub-link-item a::before { content: '↳'; position: absolute; left: 15px; color: #999; font-size: 0.9em; }
     .sub-link-item:last-child a { border-bottom: none; }
 
@@ -195,12 +170,12 @@
         .school-title-cn { font-size: 1.8em; } .school-title-en { font-size: 1em; }
         .header-left { width: 80%; } .school-logo { height: 60px; margin-right: 10px; }
         .header-right { display: none; } .hamburger { display: block; }
-        .mobile-only { display: block; border-bottom: 1px solid rgba(255,255,255,0.2); background-color: #6A5ACD; }
-        .navbar { background-color: #fff; border-bottom: 2px solid #6A5ACD; }
+        .mobile-only { display: block; border-bottom: 1px solid rgba(255,255,255,0.2); background-color: #000000; }
+        .navbar { background-color: #fff; border-bottom: 2px solid #000000; }
         .nav-container { flex-wrap: wrap; }
-        .nav-menu { display: none; flex-direction: column; width: 100%; background-color: #6A5ACD; order: 3; }
+        .nav-menu { display: none; flex-direction: column; width: 100%; background-color: #000000; order: 3; }
         .nav-menu.active { display: flex; } .nav-item { width: 100%; border-bottom: 1px solid rgba(255,255,255,0.2); }
-        .dropdown-content { position: relative; display: block; width: 100%; box-shadow: none; background-color: #6A5ACD; top: 0; }
+        .dropdown-content { position: relative; display: block; width: 100%; box-shadow: none; background-color: #000000; top: 0; }
         .dropdown-content a { color: #fff; padding-left: 30px; } .nav-item:hover .dropdown-content { display: block; }
         .container { flex-direction: column; }
         .col-left, .col-center, .col-right { width: 100%; order: 0; flex: 1 1 100%; }
@@ -292,42 +267,42 @@
 <div class="block-card">
 <h2 class="block-title sr-only" style="color: #333; border-bottom: 2px solid #333; padding-bottom: 0.2em; text-align: center;" tabindex="-1">快速連結</h2>
 <ul class="link-list-container" style="display: flex; flex-wrap: wrap; gap: 15px;">
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://www.facebook.com/Fspsntpc/" target="_blank" title="學校粉絲頁 (另開新視窗)" class="img-link"><img src="images/1.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">學校粉絲頁</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://drive.google.com/drive/u/0/folders/1vtAXoLSRns4hilQCz6AW-kWWWCHqT7oe" target="_blank" title="課程計畫 (另開新視窗)" class="img-link"><img src="images/2.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">課程計畫</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://drive.google.com/file/d/1KearFYHdaFgc3Dtj88MRkWgUCZ5ylCvL/view" target="_blank" title="教科書版本 (另開新視窗)" class="img-link"><img src="images/3.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">教科書版本</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://sites.google.com/fsps.ntpc.edu.tw/backup/%E5%BE%A9%E8%88%88%E6%A0%A1%E5%8B%99%E5%B7%A5%E4%BD%9C" target="_blank" title="復興校務工作 (另開新視窗)" class="img-link"><img src="images/4.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">復興校務工作</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://sites.google.com/fsps.ntpc.edu.tw/backup/%E8%AA%8D%E8%AD%98%E5%BE%A9%E8%88%88/%E5%AD%B8%E6%A0%A1%E5%88%86%E6%A9%9F" target="_blank" title="處室分機 (另開新視窗)" class="img-link"><img src="images/5.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">處室分機</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://sites.google.com/fsps.ntpc.edu.tw/backup/%E5%AE%B6%E9%95%B7%E5%B0%88%E5%8D%80" target="_blank" title="家長專區 (另開新視窗)" class="img-link"><img src="images/6.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">家長專區</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://sites.google.com/fsps.ntpc.edu.tw/learnfsps/%E9%A6%96%E9%A0%81" target="_blank" title="設備報修 (另開新視窗)" class="img-link"><img src="images/7.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">設備報修</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://sites.google.com/fsps.ntpc.edu.tw/backup/%E6%95%B8%E4%BD%8D%E5%AD%B8%E7%BF%92" target="_blank" title="數位學習 (另開新視窗)" class="img-link"><img src="images/8.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">數位學習</div>
 </a>
@@ -339,46 +314,46 @@
 <div style="flex: 1 1 0px !important; min-width: 0 !important; display: flex; flex-direction: column;">
 <div class="block-card">
 <h2 class="block-title" style="color: #FFFFFF; background-color: #6A5ACD; padding: 10px 15px; border-radius: 5px; text-align: center;" tabindex="-1">臨時性公告2</h2>
-<div class="carousel-container" id="carousel-Cabf8b916" data-cols="1">
+<div class="carousel-container" id="carousel-C446053e0" data-cols="1">
 <ul class="carousel-list">
 <li class="carousel-item">
 <a href="https://drive.google.com/file/d/1uPvH4tYHOyRDhsQ6bizpAmhbUD6ox3X2/view" target="_blank" title="不開放 (另開新視窗)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; color: inherit; height: 100%;">
-<img src="images/1141231noopen.jpg" alt="不開放" style="width: 100%; height: 180px; object-fit: contain; border-radius: 4px; display: block; background: transparent;" />
+<img src="images/1141231noopen.jpg" alt="" style="width: 100%; height: 180px; object-fit: contain; border-radius: 4px; display: block; background: transparent;" />
 <div class="carousel-caption">不開放</div>
 </a>
 </li>
 </ul>
-<a class="control-btn prev" onclick="moveSlide(-1, 'Cabf8b916')" role="button" aria-label="上一組內容">❮</a><a class="control-btn next" onclick="moveSlide(1, 'Cabf8b916')" role="button" aria-label="下一組內容">❯</a><button class="pause-btn" onclick="togglePause('Cabf8b916')" aria-label="暫停輪播">II 暫停</button>
+<a class="control-btn prev" onclick="moveSlide(-1, 'C446053e0')" role="button" aria-label="上一組內容">❮</a><a class="control-btn next" onclick="moveSlide(1, 'C446053e0')" role="button" aria-label="下一組內容">❯</a><button class="pause-btn" onclick="togglePause('C446053e0')" aria-label="暫停輪播">II 暫停</button>
 <div class="dots-container"></div>
 </div>
-<script>document.addEventListener('DOMContentLoaded', function() { initCarousel('Cabf8b916'); });</script>
+<script>document.addEventListener('DOMContentLoaded', function() { initCarousel('C446053e0'); });</script>
 </div>
 </div>
 <div style="flex: 1 1 0px !important; min-width: 0 !important; display: flex; flex-direction: column;">
 <div class="block-card">
 <h2 class="block-title" style="color: #FFFFFF; background-color: #6A5ACD; padding: 10px 15px; border-radius: 5px; text-align: center;" tabindex="-1">臨時性公告</h2>
-<div class="carousel-container" id="carousel-Cf89d602a" data-cols="1">
+<div class="carousel-container" id="carousel-Cc0f78ea4" data-cols="1">
 <ul class="carousel-list">
 <li class="carousel-item">
 <a href="https://drive.google.com/file/d/1uPvH4tYHOyRDhsQ6bizpAmhbUD6ox3X2/view" target="_blank" title="不開放時間 (另開新視窗)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; color: inherit; height: 100%;">
-<img src="images/1141231-01.png" alt="不開放時間" style="width: 100%; height: 180px; object-fit: contain; border-radius: 4px; display: block; background: transparent;" />
+<img src="images/1141231-01.png" alt="" style="width: 100%; height: 180px; object-fit: contain; border-radius: 4px; display: block; background: transparent;" />
 <div class="carousel-caption">不開放時間</div>
 </a>
 </li>
 </ul>
-<a class="control-btn prev" onclick="moveSlide(-1, 'Cf89d602a')" role="button" aria-label="上一組內容">❮</a><a class="control-btn next" onclick="moveSlide(1, 'Cf89d602a')" role="button" aria-label="下一組內容">❯</a><button class="pause-btn" onclick="togglePause('Cf89d602a')" aria-label="暫停輪播">II 暫停</button>
+<a class="control-btn prev" onclick="moveSlide(-1, 'Cc0f78ea4')" role="button" aria-label="上一組內容">❮</a><a class="control-btn next" onclick="moveSlide(1, 'Cc0f78ea4')" role="button" aria-label="下一組內容">❯</a><button class="pause-btn" onclick="togglePause('Cc0f78ea4')" aria-label="暫停輪播">II 暫停</button>
 <div class="dots-container"></div>
 </div>
-<script>document.addEventListener('DOMContentLoaded', function() { initCarousel('Cf89d602a'); });</script>
+<script>document.addEventListener('DOMContentLoaded', function() { initCarousel('Cc0f78ea4'); });</script>
 </div>
 </div>
 </div>
 <div class="full-width-row" style="display: block !important; width: 100% !important; margin-bottom: 10px;"><div style="width: 100%;">
 <div class="block-card">
-<div class="marquee-container" id="mq-c6d9cbaa" role="region" aria-label="跑馬燈">
+<div class="marquee-container" id="mq-6ca9e837" role="region" aria-label="跑馬燈">
 <div class="marquee-controls">
 <span class="sr-only">跑馬燈</span>
-<button class="marquee-btn" onclick="toggleMarquee('mq-c6d9cbaa')" aria-label="暫停跑馬燈">||</button></div>
+<button class="marquee-btn" onclick="toggleMarquee('mq-6ca9e837')" aria-label="暫停跑馬燈">||</button></div>
 <div class="marquee-content-wrapper"><div class="marquee-track">
 <span class="marquee-item" tabindex="0">本校參加「新北市114年度中區英語歌曲演唱競賽」成績優異：六年3班榮獲特優(參加市賽)、二年8班與四年11班榮獲優等！感謝各位指導老師辛勞</span>
 <span class="marquee-item" tabindex="0">賀！本校參加 第40屆生達盃全國桌球錦標賽 成績優異</span>
@@ -391,7 +366,7 @@
 <div class="block-card">
 <h2 class="block-title" style="color: #FFFFFF; background-color: #6A5ACD; padding: 10px 15px; border-radius: 5px; text-align: center;" tabindex="-1">臨時性公告</h2>
 <ul class="link-list-container" style="display: flex; flex-wrap: wrap; gap: 15px;">
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://drive.google.com/file/d/1uPvH4tYHOyRDhsQ6bizpAmhbUD6ox3X2/view?usp=drive_link" target="_blank" title="校園臨時不開放公告 (另開新視窗)" class="img-link"><img src="images/1141231-01.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">校園臨時不開放公告</div>
 </a>
@@ -403,77 +378,77 @@
 <div class="block-card">
 <h2 class="block-title" style="color: #FFFFFF; background-color: #6A5ACD; padding: 10px 15px; border-radius: 5px; text-align: center;" tabindex="-1">專區連結公告</h2>
 <ul class="link-list-container" style="display: flex; flex-wrap: wrap; gap: 15px;">
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://drive.google.com/file/d/1m_oyRg8oq-pwrMm7XOB0UBI5lfevsEOe/view?usp=drive_link" target="_blank" title="校園運動場開放時間 (另開新視窗)" class="img-link"><img src="images/1time.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">校園運動場開放時間</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
-<button type="button" class="accordion-btn" aria-expanded="false" aria-controls="acc-a292aba3" onclick="toggleAccordion(this)" title="展開/收合 校園運動場開放辦法"><span class="acc-title">校園運動場開放辦法</span><span class="acc-icon">▼</span></button>
-<ul id="acc-a292aba3" class="accordion-panel" hidden>
+<li class="link-list-entry" style="width: 165px;">
+<button type="button" class="accordion-btn" aria-expanded="false" aria-controls="acc-e9baf0da" onclick="toggleAccordion(this)" title="展開/收合 校園運動場開放辦法"><span class="acc-title">校園運動場開放辦法</span><span class="acc-icon">▼</span></button>
+<ul id="acc-e9baf0da" class="accordion-panel" hidden>
 <li class="sub-link-item"><a href="https://drive.google.com/drive/folders/1s08dbUBKP4bk1oCDTFNuy0rehGJ_P2sh" target="_blank" title="場地租借法規 (另開新視窗)">場地租借法規</a></li>
 <li class="sub-link-item"><a href="https://drive.google.com/drive/folders/1H97RkNTOzF9qcchjo3Won3l4dgUFwSNp" target="_blank" title="場地租借表格 (另開新視窗)">場地租借表格</a></li>
 </ul>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://sites.google.com/fsps.ntpc.edu.tw/outsideactives/%E9%A6%96%E9%A0%81" target="_blank" title="校外人士協助教學 (另開新視窗)" class="img-link"><img src="images/11.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">校外人士協助教學</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://sites.google.com/fsps.ntpc.edu.tw/afterschoolclass/%E9%A6%96%E9%A0%81?authuser=1" target="_blank" title="課後班專區 (另開新視窗)" class="img-link"><img src="images/12.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">課後班專區</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://sites.google.com/fsps.ntpc.edu.tw/fsps111" target="_blank" title="小一新生專區 (另開新視窗)" class="img-link"><img src="images/13.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">小一新生專區</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://sites.google.com/fsps.ntpc.edu.tw/fsps113/%E9%A6%96%E9%A0%81" target="_blank" title="小六畢業生專區 (另開新視窗)" class="img-link"><img src="images/14.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">小六畢業生專區</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://www.youtube.com/@%E6%96%B0%E5%8C%97%E5%B8%82%E5%BE%A9%E8%88%88%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8%E9%A0%BB/streams" target="_blank" title="校內直播 (另開新視窗)" class="img-link"><img src="images/15.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">校內直播</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://web.fsps.ntpc.edu.tw/%E8%A1%8C%E6%94%BF%E5%96%AE%E4%BD%8D_1/%E4%BA%BA%E4%BA%8B%E5%AE%A4" target="_blank" title="公務人員利益衝突回避專區 (另開新視窗)" class="img-link"><img src="images/16.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">公務人員利益衝突回避專區</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://sites.google.com/fsps.ntpc.edu.tw/english-days/%E9%A6%96%E9%A0%81" target="_blank" title="英語日活動專區 (另開新視窗)" class="img-link"><img src="images/17.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">英語日活動專區</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://drive.google.com/drive/folders/1GdwTq5ZftuAlimVhXqlW9HPzaHLCEvCb" target="_blank" title="學務處暑假作業專區 (另開新視窗)" class="img-link"><img src="images/18.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">學務處暑假作業專區</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://sites.google.com/fsps.ntpc.edu.tw/activity/114%E5%AD%B8%E5%B9%B4%E5%BA%A6%E7%AC%AC%E4%B8%80%E5%AD%B8%E6%9C%9F%E8%AA%B2%E5%BE%8C%E7%A4%BE%E5%9C%98%E5%AF%A6%E6%96%BD%E8%A8%88%E7%95%AB?authuser=0" target="_blank" title="社團育樂營 (另開新視窗)" class="img-link"><img src="images/19.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">社團育樂營</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://sites.google.com/fsps.ntpc.edu.tw/fsps-show/" target="_blank" title="復興點點名 (另開新視窗)" class="img-link"><img src="images/20.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">復興點點名</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://sites.google.com/fsps.ntpc.edu.tw/111fsps-parenting-education/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2%E4%B8%AD%E5%BF%83%E7%B6%B2%E7%AB%99" target="_blank" title="家庭教育專區 (另開新視窗)" class="img-link"><img src="images/21.png" alt="" style="height: 150px; width: 150px; object-fit: cover;" />
 <div class="img-caption" aria-hidden="true">家庭教育專區</div>
 </a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://drive.google.com/drive/folders/1s08dbUBKP4bk1oCDTFNuy0rehGJ_P2sh" target="_blank" title="場地租借法規 (另開新視窗)" class="link-list-item single-link">場地租借法規</a>
 </li>
-<li class="link-list-entry" style="width: 150px;">
+<li class="link-list-entry" style="width: 165px;">
 <a href="https://drive.google.com/drive/folders/1H97RkNTOzF9qcchjo3Won3l4dgUFwSNp" target="_blank" title="場地租借表格 (另開新視窗)" class="link-list-item single-link">場地租借表格</a>
 </li>
 </ul>
@@ -512,25 +487,25 @@
 <div style="flex: 1 1 0px !important; min-width: 0 !important; display: flex; flex-direction: column;">
 <div class="block-card">
 <h2 class="block-title" id="blk-bottom-0" style="color: #FFFFFF; background-color: #6A5ACD; padding: 10px 15px; border-radius: 5px; text-align: center;" tabindex="-1">活動花絮</h2>
-<div class="carousel-container" id="carousel-Cc3cca58c" data-cols="1">
+<div class="carousel-container" id="carousel-C29448bf2" data-cols="1">
 <ul class="carousel-list">
 <li class="carousel-item">
 <a href="https://www.youtube.com/playlist?list=PLV8xz2yaa1LIuGNJq9uEh7Kcp1sBbrTzS" target="_blank" title="114學年度復興國小47週年學校運動會校慶 (另開新視窗)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; color: inherit; height: 100%;">
-<img src="images/47.jpg" alt="114學年度復興國小47週年學校運動會校慶" style="width: 100%; height: 180px; object-fit: contain; border-radius: 4px; display: block; background: transparent;" />
+<img src="images/47.jpg" alt="" style="width: 100%; height: 180px; object-fit: contain; border-radius: 4px; display: block; background: transparent;" />
 <div class="carousel-caption">114學年度復興國小47週年學校運動會校慶</div>
 </a>
 </li>
 <li class="carousel-item">
 <a href="https://www.youtube.com/watch?v=7IIIuQlzjvg" target="_blank" title="113學年度班級模範生特輯 (另開新視窗)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; color: inherit; height: 100%;">
-<img src="images/113st.jpg" alt="113學年度班級模範生特輯" style="width: 100%; height: 180px; object-fit: contain; border-radius: 4px; display: block; background: transparent;" />
+<img src="images/113st.jpg" alt="" style="width: 100%; height: 180px; object-fit: contain; border-radius: 4px; display: block; background: transparent;" />
 <div class="carousel-caption">113學年度班級模範生特輯</div>
 </a>
 </li>
 </ul>
-<a class="control-btn prev" onclick="moveSlide(-1, 'Cc3cca58c')" role="button" aria-label="上一組內容">❮</a><a class="control-btn next" onclick="moveSlide(1, 'Cc3cca58c')" role="button" aria-label="下一組內容">❯</a><button class="pause-btn" onclick="togglePause('Cc3cca58c')" aria-label="暫停輪播">II 暫停</button>
+<a class="control-btn prev" onclick="moveSlide(-1, 'C29448bf2')" role="button" aria-label="上一組內容">❮</a><a class="control-btn next" onclick="moveSlide(1, 'C29448bf2')" role="button" aria-label="下一組內容">❯</a><button class="pause-btn" onclick="togglePause('C29448bf2')" aria-label="暫停輪播">II 暫停</button>
 <div class="dots-container"></div>
 </div>
-<script>document.addEventListener('DOMContentLoaded', function() { initCarousel('Cc3cca58c'); });</script>
+<script>document.addEventListener('DOMContentLoaded', function() { initCarousel('C29448bf2'); });</script>
 </div>
 </div>
 <div style="flex: 1 1 0px !important; min-width: 0 !important; display: flex; flex-direction: column;">

@@ -6,7 +6,7 @@
     body { font-family: 'Iansui', 'Microsoft JhengHei', sans-serif; font-size: 100%; margin: 0; padding: 0; display: flex; flex-direction: column; min-height: 100vh; }
     .access-key { color: #666; text-decoration: none; font-size: 0.9em; padding: 5px; cursor: help; }
     .access-key:focus { outline: 2px solid blue; color: #000; }
-    .header { background: #fff; padding: 10px 20px; border-bottom: 5px solid #6A5ACD; display: flex; justify-content: space-between; align-items: center; position: relative; }
+    .header { background: #fff; padding: 10px 20px; border-bottom: 5px solid #000000; display: flex; justify-content: space-between; align-items: center; position: relative; }
     .header-left { display: flex; align-items: center; flex-wrap: wrap; }
     .logo-link { display: flex; align-items: center; text-decoration: none; color: inherit; flex-wrap: wrap; position: relative; }
     .logo-link:hover { opacity: 0.8; }
@@ -16,12 +16,12 @@
     .school-title-en { font-size: 1.25em; color: #666; display: block; }
     .header-right { display: flex; align-items: center; gap: 10px; }
     .header-btn { text-decoration: none; color: #555; font-weight: bold; font-size: 1.1em; display: flex; align-items: center; padding: 5px 10px; border-radius: 5px; transition: background 0.3s; cursor: pointer; white-space: nowrap; position: relative; }
-    .header-btn:hover { background-color: #f0f8ff; color: #6A5ACD; }
+    .header-btn:hover { background-color: #f0f8ff; color: #000000; }
     .search-header { display: flex; align-items: center; border: 1px solid #ccc; border-radius: 20px; padding: 2px 5px; background: #fff; height: 36px; }
     .search-header input { border: none; outline: none; padding: 0 10px; font-size: 1em; width: 150px; background: transparent; }
-    .search-header button { background: none; border: none; cursor: pointer; font-size: 1.1em; color: #6A5ACD; padding: 0 8px; display: flex; align-items: center; }
+    .search-header button { background: none; border: none; cursor: pointer; font-size: 1.1em; color: #000000; padding: 0 8px; display: flex; align-items: center; }
     .search-header button:hover { color: #000; }
-    .navbar { background-color: #6A5ACD; }
+    .navbar { background-color: #000000; }
     .nav-container { max-width: 100%; margin: 0 auto; padding: 0 10px; }
     .nav-menu { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
     .nav-item { position: relative; }
@@ -37,7 +37,7 @@
     .dropdown-content a:hover { background-color: #ddd; }
     .nav-item:hover .dropdown-content { display: block; }
     .nav-item:focus-within .dropdown-content { display: block; }
-    .hamburger { display: none; background: none; border: none; color: #6A5ACD; font-size: 2.5em; cursor: pointer; position: absolute; top: 15px; right: 20px; }
+    .hamburger { display: none; background: none; border: none; color: #000000; font-size: 2.5em; cursor: pointer; position: absolute; top: 15px; right: 20px; }
     .mobile-only { display: none; }
     .banner-container { width: 100%; max-width: 100%; margin: 0 auto; padding-top: 10px; }
     .banner-img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 400px; }
@@ -70,15 +70,35 @@
     .block-card > *:last-child { margin-bottom: 0 !important; }
     h2.block-title { font-size: 1.5em; border-bottom: 2px solid #ccc; padding-bottom: 0.1em; margin-bottom: 8px; margin-top: 0; }
     
+    /* 提示文字 Tooltip 樣式 */
     [data-title] { position: relative; }
     [data-title]:hover::after { content: attr(data-title); position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background-color: #fff; color: #333; border: 1px solid #ccc; box-shadow: 0 4px 10px rgba(0,0,0,0.2); padding: 6px 12px; border-radius: 4px; white-space: nowrap; font-size: 0.9em; z-index: 99999; pointer-events: none; margin-top: 8px; }
     [data-title]:hover::before { content: ''; position: absolute; top: 100%; left: 50%; margin-left: -6px; margin-top: -4px; border-width: 6px; border-style: solid; border-color: transparent transparent #fff transparent; z-index: 99999; }
     
-    .link-list-item { display: block; text-decoration: none; color: #333; background-color: #fff; border: 1px solid #ddd; padding: 10px 15px; margin-bottom: 5px; border-radius: 5px; transition: all 0.2s ease; font-size: 1.1em; line-height: 1.4; position: relative; }
-    .link-list-item:hover { background-color: #f9f9f9; border-color: #bbb; color: #6A5ACD; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transform: translateY(-1px); }
+    /* ★★★ 修改重點：針對文字連結的層級修正 ★★★ */
+    .link-list-item { 
+        display: block; text-decoration: none; color: #333; background-color: #fff; border: 1px solid #ddd; 
+        padding: 10px 15px; margin-bottom: 5px; border-radius: 5px; transition: all 0.2s ease; 
+        font-size: 1.1em; line-height: 1.4; position: relative; 
+    }
+    .link-list-item:hover { 
+        background-color: #f9f9f9; border-color: #bbb; color: #000000; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); transform: translateY(-1px);
+        z-index: 1000; /* 新增：讓文字連結在滑鼠移入時浮到最上層，避免提示文字被遮擋 */
+    }
     
-    a.img-link { display: block; text-align: center; margin-bottom: 5px; text-decoration: none; border: 1px solid #eee; padding: 5px; border-radius: 5px; transition: transform 0.2s; position: relative; overflow: hidden; }
-    a.img-link:hover { transform: scale(1.02); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .single-link { display: block; text-decoration: none; color: #333; background-color: #fff; border: 1px solid #ddd; padding: 12px 15px; border-radius: 5px; transition: all 0.2s; }
+    .single-link:hover { background-color: #f9f9f9; color: #000000; border-color: #000000; }
+    
+    a.img-link { 
+        display: block; text-align: center; margin-bottom: 5px; text-decoration: none; border: 1px solid #eee; padding: 5px; border-radius: 5px; 
+        transition: transform 0.2s; position: relative; overflow: visible; 
+    }
+    a.img-link:hover { 
+        transform: scale(1.02); box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        z-index: 1000; /* 讓圖片連結也能浮到最上層 */
+    }
+    
     a.img-link img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
     .img-caption { position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(0, 0, 0, 0.8); color: #fff; padding: 5px; text-align: center; font-size: 1em; opacity: 0; transition: opacity 0.2s; pointer-events: none; z-index: 10; }
     a.img-link:hover .img-caption { opacity: 1; }
@@ -89,65 +109,22 @@
     
 /* Carousel (RWD 修正版 V3 - 強力 Hover 隱藏版) */
     .carousel-container { position: relative; max-width: 100%; margin: auto; overflow: hidden; border-radius: 5px; min-height: 200px; }
-    
-    /* 預設隱藏捲軸 */
-    .carousel-list {
-        display: flex; 
-        overflow-x: auto; 
-        scroll-snap-type: x mandatory; 
-        list-style: none; 
-        padding: 0; 
-        margin: 0;
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none;  /* IE 10+ */
-    }
-    .carousel-list::-webkit-scrollbar { display: none; /* Chrome/Safari */ }
+    .carousel-list { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; list-style: none; padding: 0; margin: 0; scrollbar-width: none; -ms-overflow-style: none; }
+    .carousel-list::-webkit-scrollbar { display: none; }
 
-    /* 預設手機版: 100% 寬度 */
-    .carousel-item { 
-        flex: 0 0 100%; 
-        width: 100%;
-        scroll-snap-align: start; 
-        box-sizing: border-box; 
-        padding: 5px;
-        position: relative; /* 關鍵：讓絕對定位的標題可以參考此容器 */
-    }
+    .carousel-item { flex: 0 0 100%; width: 100%; scroll-snap-align: start; box-sizing: border-box; padding: 5px; position: relative; }
 
-    /* 電腦版 3 欄: 33.2% 寬度 (微調以避免捲軸) */
-    @media (min-width: 901px) {
-        .carousel-container.cols-3 .carousel-item { 
-            flex: 0 0 33.2%; 
-            width: 33.2%; 
-        }
-    }
+    @media (min-width: 901px) { .carousel-container.cols-3 .carousel-item { flex: 0 0 33.2%; width: 33.2%; } }
 
-    /* --- 修改重點：強制隱藏並在 Hover 時顯示 --- */
-    /* 使用 !important 覆蓋原本在 HTML 裡的 inline style */
     .carousel-item .carousel-caption { 
-        position: absolute !important; 
-        bottom: 0 !important; 
-        left: 0 !important; 
-        width: 100% !important; 
-        background: rgba(0, 0, 0, 0.7) !important; /* 半透明黑色背景 */
-        color: #fff !important; /* 白色文字 */
-        padding: 10px !important; 
-        font-size: 1.1em !important; 
-        margin: 0 !important;
-        opacity: 0 !important; /* 強制預設透明度為 0 (隱藏) */
-        transition: opacity 0.3s ease-in-out !important; 
-        pointer-events: none; /* 避免文字區塊擋住圖片點擊 */
-        z-index: 10;
-        box-sizing: border-box;
-        text-align: center !important; /* ★★★ 新增：文字置中 ★★★ */
+        position: absolute !important; bottom: 0 !important; left: 0 !important; width: 100% !important; 
+        background: rgba(0, 0, 0, 0.7) !important; color: #fff !important; padding: 10px !important; 
+        font-size: 1.1em !important; margin: 0 !important; opacity: 0 !important; 
+        transition: opacity 0.3s ease-in-out !important; pointer-events: none; z-index: 10; box-sizing: border-box; text-align: center !important;
     }
 
-    /* 當滑鼠移到圖片或項目上時，文字強制浮現 */
-    .carousel-item:hover .carousel-caption,
-    .carousel-item:focus-within .carousel-caption { 
-        opacity: 1 !important; 
-    }
+    .carousel-item:hover .carousel-caption, .carousel-item:focus-within .carousel-caption { opacity: 1 !important; }
 
-    /* 控制按鈕 */
     .control-btn { cursor: pointer; position: absolute; top: 50%; width: auto; padding: 6px 12px; margin-top: -20px; color: white; font-weight: bold; font-size: 1em; transition: 0.6s ease; border: none; user-select: none; background-color: rgba(0,0,0,0.3); text-decoration: none; z-index: 101; }
     .control-btn:hover, .control-btn:focus { background-color: rgba(0,0,0,0.8); outline: 2px solid yellow; }
     .prev { left: 0; border-radius: 0 3px 3px 0; } .next { right: 0; border-radius: 3px 0 0 3px; }
@@ -160,30 +137,28 @@
 
     /* Marquee & Accordion (保留不變) */
     .marquee-container { position: relative; overflow: hidden; background: #fff; border: 1px solid #ddd; border-radius: 5px; padding: 5px 5px 5px 90px; display: flex; align-items: center; height: 40px; }
-    .marquee-controls { position: absolute; left: 0; top: 0; bottom: 0; width: 85px; background: #fff; color: #6A5ACD; z-index: 10; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; border-right: 1px solid #eee; }
-    .marquee-btn { background: #fff; border: 1px solid #6A5ACD; color: #6A5ACD; cursor: pointer; font-size: 0.8em; padding: 2px 5px; margin-left: 5px; border-radius: 3px; }
-    .marquee-btn:hover, .marquee-btn:focus { background: #6A5ACD; color: #fff; outline: 2px solid yellow; }
+    .marquee-controls { position: absolute; left: 0; top: 0; bottom: 0; width: 85px; background: #fff; color: #000000; z-index: 10; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; border-right: 1px solid #eee; }
+    .marquee-btn { background: #fff; border: 1px solid #000000; color: #000000; cursor: pointer; font-size: 0.8em; padding: 2px 5px; margin-left: 5px; border-radius: 3px; }
+    .marquee-btn:hover, .marquee-btn:focus { background: #000000; color: #fff; outline: 2px solid yellow; }
     .marquee-content-wrapper { width: 100%; overflow: hidden; }
     .marquee-track { white-space: nowrap; display: inline-block; animation: marquee-scroll 25s linear infinite; padding-left: 100%; }
     .marquee-paused .marquee-track, .marquee-track:hover, .marquee-track:focus-within { animation-play-state: paused; }
     .marquee-item { display: inline-block; margin-right: 40px; font-size: 1.1em; color: #333; text-decoration: none; vertical-align: middle; position: relative; }
-    .marquee-item:hover, .marquee-item:focus { color: #6A5ACD; text-decoration: underline; outline: 2px solid blue; }
+    .marquee-item:hover, .marquee-item:focus { color: #000000; text-decoration: underline; outline: 2px solid blue; }
     .marquee-item::before { content: '📢 '; margin-right: 3px; }
     @keyframes marquee-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
 
     .link-list-container { list-style: none; padding: 0; margin: 0; }
     .link-list-entry { margin-bottom: 5px; }
-    .single-link { display: block; text-decoration: none; color: #333; background-color: #fff; border: 1px solid #ddd; padding: 12px 15px; border-radius: 5px; transition: all 0.2s; }
-    .single-link:hover { background-color: #f9f9f9; color: #6A5ACD; border-color: #6A5ACD; }
     .accordion-btn { width: 100%; background-color: #fff; color: #333; cursor: pointer; padding: 12px 15px; border: 1px solid #ddd; border-radius: 5px; text-align: left; outline: none; font-size: 1.1em; font-family: inherit; display: flex; justify-content: space-between; align-items: center; transition: 0.2s; }
-    .accordion-btn:hover, .accordion-btn:focus { background-color: #f0f8ff; color: #6A5ACD; border-color: #6A5ACD; outline: 2px solid yellow; }
-    .accordion-btn[aria-expanded="true"] { background-color: #6A5ACD; color: #fff; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+    .accordion-btn:hover, .accordion-btn:focus { background-color: #f0f8ff; color: #000000; border-color: #000000; outline: 2px solid yellow; }
+    .accordion-btn[aria-expanded="true"] { background-color: #000000; color: #fff; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
     .accordion-btn[aria-expanded="true"] .acc-icon { transform: rotate(180deg); }
     .acc-icon { transition: transform 0.3s ease; font-size: 0.8em; }
     .accordion-panel { padding: 0; background-color: #fafafa; border: 1px solid #ddd; border-top: none; border-radius: 0 0 5px 5px; list-style: none; margin: 0; }
     .accordion-panel[hidden] { display: none; }
     .sub-link-item a { display: block; padding: 10px 15px 10px 30px; text-decoration: none; color: #555; border-bottom: 1px dashed #eee; transition: 0.2s; position: relative; }
-    .sub-link-item a:hover, .sub-link-item a:focus { background-color: #eee; color: #6A5ACD; padding-left: 35px; outline: 2px solid yellow; }
+    .sub-link-item a:hover, .sub-link-item a:focus { background-color: #eee; color: #000000; padding-left: 35px; outline: 2px solid yellow; }
     .sub-link-item a::before { content: '↳'; position: absolute; left: 15px; color: #999; font-size: 0.9em; }
     .sub-link-item:last-child a { border-bottom: none; }
 
@@ -195,12 +170,12 @@
         .school-title-cn { font-size: 1.8em; } .school-title-en { font-size: 1em; }
         .header-left { width: 80%; } .school-logo { height: 60px; margin-right: 10px; }
         .header-right { display: none; } .hamburger { display: block; }
-        .mobile-only { display: block; border-bottom: 1px solid rgba(255,255,255,0.2); background-color: #6A5ACD; }
-        .navbar { background-color: #fff; border-bottom: 2px solid #6A5ACD; }
+        .mobile-only { display: block; border-bottom: 1px solid rgba(255,255,255,0.2); background-color: #000000; }
+        .navbar { background-color: #fff; border-bottom: 2px solid #000000; }
         .nav-container { flex-wrap: wrap; }
-        .nav-menu { display: none; flex-direction: column; width: 100%; background-color: #6A5ACD; order: 3; }
+        .nav-menu { display: none; flex-direction: column; width: 100%; background-color: #000000; order: 3; }
         .nav-menu.active { display: flex; } .nav-item { width: 100%; border-bottom: 1px solid rgba(255,255,255,0.2); }
-        .dropdown-content { position: relative; display: block; width: 100%; box-shadow: none; background-color: #6A5ACD; top: 0; }
+        .dropdown-content { position: relative; display: block; width: 100%; box-shadow: none; background-color: #000000; top: 0; }
         .dropdown-content a { color: #fff; padding-left: 30px; } .nav-item:hover .dropdown-content { display: block; }
         .container { flex-direction: column; }
         .col-left, .col-center, .col-right { width: 100%; order: 0; flex: 1 1 100%; }
@@ -620,15 +595,6 @@
 <div class="zone-container zone-bottom" style="border-color: #9B59B6; background-color: #F3E5F5;">
 <span class="zone-header" style="color: #8E44AD;">📄 內容</span>
 <ul class="card-list" style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px;">
-<li class="card-item type-HtmlText" style="display: none;">
-<div class="card-header"><div class="card-title-group"><span class="card-title">學校簡介</span><span class="card-type-tag">內容</span></div></div>
-<div class="card-content"><ul class="card-links"><li><div class="acc-row">🔗 <a href="01.html">點擊查看學校簡介</a></div></li></ul></div></li>
-<li class="card-item type-HtmlText" style="display: none;">
-<div class="card-header"><div class="card-title-group"><span class="card-title">處室介紹</span><span class="card-type-tag">內容</span></div></div>
-<div class="card-content"><ul class="card-links"><li><div class="acc-row">🔗 <a href="02.html">點擊查看各處室職掌與介紹</a></div></li></ul></div></li>
-<li class="card-item type-HtmlText" style="display: none;">
-<div class="card-header"><div class="card-title-group"><span class="card-title">分機表</span><span class="card-type-tag">內容</span></div></div>
-<div class="card-content"><ul class="card-links"><li><div class="acc-row">🔗 <a href="ext.html">點擊查看全校分機表</a></div></li></ul></div></li>
 </ul></div></div>
 </div>
 <footer class="footer"><a href="#ab" id="ab" accesskey="B" title="下方功能區" class="access-key" style="color:#ccc;">:::</a><div style="line-height: 1.8; margin-bottom: 15px;">© 2025 新北市中和區復興國民小學 版權所有<br>
