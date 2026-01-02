@@ -6,7 +6,7 @@
     body { font-family: 'Iansui', 'Microsoft JhengHei', sans-serif; font-size: 100%; margin: 0; padding: 0; display: flex; flex-direction: column; min-height: 100vh; }
     .access-key { color: #666; text-decoration: none; font-size: 0.9em; padding: 5px; cursor: help; }
     .access-key:focus { outline: 2px solid blue; color: #000; }
-    .header { background: #fff; padding: 10px 20px; border-bottom: 5px solid #000000; display: flex; justify-content: space-between; align-items: center; position: relative; }
+    .header { background: #fff; padding: 10px 20px; border-bottom: 5px solid #6A5ACD; display: flex; justify-content: space-between; align-items: center; position: relative; }
     .header-left { display: flex; align-items: center; flex-wrap: wrap; }
     .logo-link { display: flex; align-items: center; text-decoration: none; color: inherit; flex-wrap: wrap; position: relative; }
     .logo-link:hover { opacity: 0.8; }
@@ -16,12 +16,12 @@
     .school-title-en { font-size: 1.25em; color: #666; display: block; }
     .header-right { display: flex; align-items: center; gap: 10px; }
     .header-btn { text-decoration: none; color: #555; font-weight: bold; font-size: 1.1em; display: flex; align-items: center; padding: 5px 10px; border-radius: 5px; transition: background 0.3s; cursor: pointer; white-space: nowrap; position: relative; }
-    .header-btn:hover { background-color: #f0f8ff; color: #000000; }
+    .header-btn:hover { background-color: #f0f8ff; color: #6A5ACD; }
     .search-header { display: flex; align-items: center; border: 1px solid #ccc; border-radius: 20px; padding: 2px 5px; background: #fff; height: 36px; }
     .search-header input { border: none; outline: none; padding: 0 10px; font-size: 1em; width: 150px; background: transparent; }
-    .search-header button { background: none; border: none; cursor: pointer; font-size: 1.1em; color: #000000; padding: 0 8px; display: flex; align-items: center; }
+    .search-header button { background: none; border: none; cursor: pointer; font-size: 1.1em; color: #6A5ACD; padding: 0 8px; display: flex; align-items: center; }
     .search-header button:hover { color: #000; }
-    .navbar { background-color: #000000; }
+    .navbar { background-color: #6A5ACD; }
     .nav-container { max-width: 100%; margin: 0 auto; padding: 0 10px; }
     .nav-menu { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
     .nav-item { position: relative; }
@@ -37,7 +37,7 @@
     .dropdown-content a:hover { background-color: #ddd; }
     .nav-item:hover .dropdown-content { display: block; }
     .nav-item:focus-within .dropdown-content { display: block; }
-    .hamburger { display: none; background: none; border: none; color: #000000; font-size: 2.5em; cursor: pointer; position: absolute; top: 15px; right: 20px; }
+    .hamburger { display: none; background: none; border: none; color: #6A5ACD; font-size: 2.5em; cursor: pointer; position: absolute; top: 15px; right: 20px; }
     .mobile-only { display: none; }
     .banner-container { width: 100%; max-width: 100%; margin: 0 auto; padding-top: 10px; }
     .banner-img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 400px; }
@@ -82,13 +82,13 @@
         font-size: 1.1em; line-height: 1.4; position: relative; 
     }
     .link-list-item:hover { 
-        background-color: #f9f9f9; border-color: #bbb; color: #000000; 
+        background-color: #f9f9f9; border-color: #bbb; color: #6A5ACD; 
         box-shadow: 0 2px 5px rgba(0,0,0,0.1); transform: translateY(-1px);
         z-index: 1000; /* 新增：讓文字連結在滑鼠移入時浮到最上層，避免提示文字被遮擋 */
     }
     
     .single-link { display: block; text-decoration: none; color: #333; background-color: #fff; border: 1px solid #ddd; padding: 12px 15px; border-radius: 5px; transition: all 0.2s; }
-    .single-link:hover { background-color: #f9f9f9; color: #000000; border-color: #000000; }
+    .single-link:hover { background-color: #f9f9f9; color: #6A5ACD; border-color: #6A5ACD; }
     
     a.img-link { 
         display: block; text-align: center; margin-bottom: 5px; text-decoration: none; border: 1px solid #eee; padding: 5px; border-radius: 5px; 
@@ -137,28 +137,28 @@
 
     /* Marquee & Accordion (保留不變) */
     .marquee-container { position: relative; overflow: hidden; background: #fff; border: 1px solid #ddd; border-radius: 5px; padding: 5px 5px 5px 90px; display: flex; align-items: center; height: 40px; }
-    .marquee-controls { position: absolute; left: 0; top: 0; bottom: 0; width: 85px; background: #fff; color: #000000; z-index: 10; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; border-right: 1px solid #eee; }
-    .marquee-btn { background: #fff; border: 1px solid #000000; color: #000000; cursor: pointer; font-size: 0.8em; padding: 2px 5px; margin-left: 5px; border-radius: 3px; }
-    .marquee-btn:hover, .marquee-btn:focus { background: #000000; color: #fff; outline: 2px solid yellow; }
+    .marquee-controls { position: absolute; left: 0; top: 0; bottom: 0; width: 85px; background: #fff; color: #6A5ACD; z-index: 10; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; border-right: 1px solid #eee; }
+    .marquee-btn { background: #fff; border: 1px solid #6A5ACD; color: #6A5ACD; cursor: pointer; font-size: 0.8em; padding: 2px 5px; margin-left: 5px; border-radius: 3px; }
+    .marquee-btn:hover, .marquee-btn:focus { background: #6A5ACD; color: #fff; outline: 2px solid yellow; }
     .marquee-content-wrapper { width: 100%; overflow: hidden; }
     .marquee-track { white-space: nowrap; display: inline-block; animation: marquee-scroll 25s linear infinite; padding-left: 100%; }
     .marquee-paused .marquee-track, .marquee-track:hover, .marquee-track:focus-within { animation-play-state: paused; }
     .marquee-item { display: inline-block; margin-right: 40px; font-size: 1.1em; color: #333; text-decoration: none; vertical-align: middle; position: relative; }
-    .marquee-item:hover, .marquee-item:focus { color: #000000; text-decoration: underline; outline: 2px solid blue; }
+    .marquee-item:hover, .marquee-item:focus { color: #6A5ACD; text-decoration: underline; outline: 2px solid blue; }
     .marquee-item::before { content: '📢 '; margin-right: 3px; }
     @keyframes marquee-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
 
     .link-list-container { list-style: none; padding: 0; margin: 0; }
     .link-list-entry { margin-bottom: 5px; }
     .accordion-btn { width: 100%; background-color: #fff; color: #333; cursor: pointer; padding: 12px 15px; border: 1px solid #ddd; border-radius: 5px; text-align: left; outline: none; font-size: 1.1em; font-family: inherit; display: flex; justify-content: space-between; align-items: center; transition: 0.2s; }
-    .accordion-btn:hover, .accordion-btn:focus { background-color: #f0f8ff; color: #000000; border-color: #000000; outline: 2px solid yellow; }
-    .accordion-btn[aria-expanded="true"] { background-color: #000000; color: #fff; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+    .accordion-btn:hover, .accordion-btn:focus { background-color: #f0f8ff; color: #6A5ACD; border-color: #6A5ACD; outline: 2px solid yellow; }
+    .accordion-btn[aria-expanded="true"] { background-color: #6A5ACD; color: #fff; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
     .accordion-btn[aria-expanded="true"] .acc-icon { transform: rotate(180deg); }
     .acc-icon { transition: transform 0.3s ease; font-size: 0.8em; }
     .accordion-panel { padding: 0; background-color: #fafafa; border: 1px solid #ddd; border-top: none; border-radius: 0 0 5px 5px; list-style: none; margin: 0; }
     .accordion-panel[hidden] { display: none; }
     .sub-link-item a { display: block; padding: 10px 15px 10px 30px; text-decoration: none; color: #555; border-bottom: 1px dashed #eee; transition: 0.2s; position: relative; }
-    .sub-link-item a:hover, .sub-link-item a:focus { background-color: #eee; color: #000000; padding-left: 35px; outline: 2px solid yellow; }
+    .sub-link-item a:hover, .sub-link-item a:focus { background-color: #eee; color: #6A5ACD; padding-left: 35px; outline: 2px solid yellow; }
     .sub-link-item a::before { content: '↳'; position: absolute; left: 15px; color: #999; font-size: 0.9em; }
     .sub-link-item:last-child a { border-bottom: none; }
 
@@ -170,12 +170,12 @@
         .school-title-cn { font-size: 1.8em; } .school-title-en { font-size: 1em; }
         .header-left { width: 80%; } .school-logo { height: 60px; margin-right: 10px; }
         .header-right { display: none; } .hamburger { display: block; }
-        .mobile-only { display: block; border-bottom: 1px solid rgba(255,255,255,0.2); background-color: #000000; }
-        .navbar { background-color: #fff; border-bottom: 2px solid #000000; }
+        .mobile-only { display: block; border-bottom: 1px solid rgba(255,255,255,0.2); background-color: #6A5ACD; }
+        .navbar { background-color: #fff; border-bottom: 2px solid #6A5ACD; }
         .nav-container { flex-wrap: wrap; }
-        .nav-menu { display: none; flex-direction: column; width: 100%; background-color: #000000; order: 3; }
+        .nav-menu { display: none; flex-direction: column; width: 100%; background-color: #6A5ACD; order: 3; }
         .nav-menu.active { display: flex; } .nav-item { width: 100%; border-bottom: 1px solid rgba(255,255,255,0.2); }
-        .dropdown-content { position: relative; display: block; width: 100%; box-shadow: none; background-color: #000000; top: 0; }
+        .dropdown-content { position: relative; display: block; width: 100%; box-shadow: none; background-color: #6A5ACD; top: 0; }
         .dropdown-content a { color: #fff; padding-left: 30px; } .nav-item:hover .dropdown-content { display: block; }
         .container { flex-direction: column; }
         .col-left, .col-center, .col-right { width: 100%; order: 0; flex: 1 1 100%; }
@@ -314,7 +314,7 @@
 <div style="flex: 1 1 0px !important; min-width: 0 !important; display: flex; flex-direction: column;">
 <div class="block-card">
 <h2 class="block-title" style="color: #FFFFFF; background-color: #6A5ACD; padding: 10px 15px; border-radius: 5px; text-align: center;" tabindex="-1">臨時性公告2</h2>
-<div class="carousel-container" id="carousel-C446053e0" data-cols="1">
+<div class="carousel-container" id="carousel-Ce5721e61" data-cols="1">
 <ul class="carousel-list">
 <li class="carousel-item">
 <a href="https://drive.google.com/file/d/1uPvH4tYHOyRDhsQ6bizpAmhbUD6ox3X2/view" target="_blank" title="不開放 (另開新視窗)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; color: inherit; height: 100%;">
@@ -323,16 +323,16 @@
 </a>
 </li>
 </ul>
-<a class="control-btn prev" onclick="moveSlide(-1, 'C446053e0')" role="button" aria-label="上一組內容">❮</a><a class="control-btn next" onclick="moveSlide(1, 'C446053e0')" role="button" aria-label="下一組內容">❯</a><button class="pause-btn" onclick="togglePause('C446053e0')" aria-label="暫停輪播">II 暫停</button>
+<a class="control-btn prev" onclick="moveSlide(-1, 'Ce5721e61')" role="button" aria-label="上一組內容">❮</a><a class="control-btn next" onclick="moveSlide(1, 'Ce5721e61')" role="button" aria-label="下一組內容">❯</a><button class="pause-btn" onclick="togglePause('Ce5721e61')" aria-label="暫停輪播">II 暫停</button>
 <div class="dots-container"></div>
 </div>
-<script>document.addEventListener('DOMContentLoaded', function() { initCarousel('C446053e0'); });</script>
+<script>document.addEventListener('DOMContentLoaded', function() { initCarousel('Ce5721e61'); });</script>
 </div>
 </div>
 <div style="flex: 1 1 0px !important; min-width: 0 !important; display: flex; flex-direction: column;">
 <div class="block-card">
 <h2 class="block-title" style="color: #FFFFFF; background-color: #6A5ACD; padding: 10px 15px; border-radius: 5px; text-align: center;" tabindex="-1">臨時性公告</h2>
-<div class="carousel-container" id="carousel-Cc0f78ea4" data-cols="1">
+<div class="carousel-container" id="carousel-Cd11e9665" data-cols="1">
 <ul class="carousel-list">
 <li class="carousel-item">
 <a href="https://drive.google.com/file/d/1uPvH4tYHOyRDhsQ6bizpAmhbUD6ox3X2/view" target="_blank" title="不開放時間 (另開新視窗)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; color: inherit; height: 100%;">
@@ -341,19 +341,19 @@
 </a>
 </li>
 </ul>
-<a class="control-btn prev" onclick="moveSlide(-1, 'Cc0f78ea4')" role="button" aria-label="上一組內容">❮</a><a class="control-btn next" onclick="moveSlide(1, 'Cc0f78ea4')" role="button" aria-label="下一組內容">❯</a><button class="pause-btn" onclick="togglePause('Cc0f78ea4')" aria-label="暫停輪播">II 暫停</button>
+<a class="control-btn prev" onclick="moveSlide(-1, 'Cd11e9665')" role="button" aria-label="上一組內容">❮</a><a class="control-btn next" onclick="moveSlide(1, 'Cd11e9665')" role="button" aria-label="下一組內容">❯</a><button class="pause-btn" onclick="togglePause('Cd11e9665')" aria-label="暫停輪播">II 暫停</button>
 <div class="dots-container"></div>
 </div>
-<script>document.addEventListener('DOMContentLoaded', function() { initCarousel('Cc0f78ea4'); });</script>
+<script>document.addEventListener('DOMContentLoaded', function() { initCarousel('Cd11e9665'); });</script>
 </div>
 </div>
 </div>
 <div class="full-width-row" style="display: block !important; width: 100% !important; margin-bottom: 10px;"><div style="width: 100%;">
 <div class="block-card">
-<div class="marquee-container" id="mq-6ca9e837" role="region" aria-label="跑馬燈">
+<div class="marquee-container" id="mq-7efd5b21" role="region" aria-label="跑馬燈">
 <div class="marquee-controls">
 <span class="sr-only">跑馬燈</span>
-<button class="marquee-btn" onclick="toggleMarquee('mq-6ca9e837')" aria-label="暫停跑馬燈">||</button></div>
+<button class="marquee-btn" onclick="toggleMarquee('mq-7efd5b21')" aria-label="暫停跑馬燈">||</button></div>
 <div class="marquee-content-wrapper"><div class="marquee-track">
 <span class="marquee-item" tabindex="0">本校參加「新北市114年度中區英語歌曲演唱競賽」成績優異：六年3班榮獲特優(參加市賽)、二年8班與四年11班榮獲優等！感謝各位指導老師辛勞</span>
 <span class="marquee-item" tabindex="0">賀！本校參加 第40屆生達盃全國桌球錦標賽 成績優異</span>
@@ -384,8 +384,8 @@
 </a>
 </li>
 <li class="link-list-entry" style="width: 165px;">
-<button type="button" class="accordion-btn" aria-expanded="false" aria-controls="acc-e9baf0da" onclick="toggleAccordion(this)" title="展開/收合 校園運動場開放辦法"><span class="acc-title">校園運動場開放辦法</span><span class="acc-icon">▼</span></button>
-<ul id="acc-e9baf0da" class="accordion-panel" hidden>
+<button type="button" class="accordion-btn" aria-expanded="false" aria-controls="acc-b8beca66" onclick="toggleAccordion(this)" title="展開/收合 校園運動場開放辦法"><span class="acc-title">校園運動場開放辦法</span><span class="acc-icon">▼</span></button>
+<ul id="acc-b8beca66" class="accordion-panel" hidden>
 <li class="sub-link-item"><a href="https://drive.google.com/drive/folders/1s08dbUBKP4bk1oCDTFNuy0rehGJ_P2sh" target="_blank" title="場地租借法規 (另開新視窗)">場地租借法規</a></li>
 <li class="sub-link-item"><a href="https://drive.google.com/drive/folders/1H97RkNTOzF9qcchjo3Won3l4dgUFwSNp" target="_blank" title="場地租借表格 (另開新視窗)">場地租借表格</a></li>
 </ul>
@@ -487,7 +487,7 @@
 <div style="flex: 1 1 0px !important; min-width: 0 !important; display: flex; flex-direction: column;">
 <div class="block-card">
 <h2 class="block-title" id="blk-bottom-0" style="color: #FFFFFF; background-color: #6A5ACD; padding: 10px 15px; border-radius: 5px; text-align: center;" tabindex="-1">活動花絮</h2>
-<div class="carousel-container" id="carousel-C29448bf2" data-cols="1">
+<div class="carousel-container" id="carousel-C53432a01" data-cols="1">
 <ul class="carousel-list">
 <li class="carousel-item">
 <a href="https://www.youtube.com/playlist?list=PLV8xz2yaa1LIuGNJq9uEh7Kcp1sBbrTzS" target="_blank" title="114學年度復興國小47週年學校運動會校慶 (另開新視窗)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; color: inherit; height: 100%;">
@@ -502,10 +502,10 @@
 </a>
 </li>
 </ul>
-<a class="control-btn prev" onclick="moveSlide(-1, 'C29448bf2')" role="button" aria-label="上一組內容">❮</a><a class="control-btn next" onclick="moveSlide(1, 'C29448bf2')" role="button" aria-label="下一組內容">❯</a><button class="pause-btn" onclick="togglePause('C29448bf2')" aria-label="暫停輪播">II 暫停</button>
+<a class="control-btn prev" onclick="moveSlide(-1, 'C53432a01')" role="button" aria-label="上一組內容">❮</a><a class="control-btn next" onclick="moveSlide(1, 'C53432a01')" role="button" aria-label="下一組內容">❯</a><button class="pause-btn" onclick="togglePause('C53432a01')" aria-label="暫停輪播">II 暫停</button>
 <div class="dots-container"></div>
 </div>
-<script>document.addEventListener('DOMContentLoaded', function() { initCarousel('C29448bf2'); });</script>
+<script>document.addEventListener('DOMContentLoaded', function() { initCarousel('C53432a01'); });</script>
 </div>
 </div>
 <div style="flex: 1 1 0px !important; min-width: 0 !important; display: flex; flex-direction: column;">
