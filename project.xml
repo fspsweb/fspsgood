@@ -1058,20 +1058,6 @@
           <ImageUrl>images/21.png</ImageUrl>
           <SubItems />
         </ContentItem>
-        <ContentItem>
-          <Title>場地租借法規</Title>
-          <Url>https://drive.google.com/drive/folders/1s08dbUBKP4bk1oCDTFNuy0rehGJ_P2sh</Url>
-          <NewWindow>true</NewWindow>
-          <ImageUrl />
-          <SubItems />
-        </ContentItem>
-        <ContentItem>
-          <Title>場地租借表格</Title>
-          <Url>https://drive.google.com/drive/folders/1H97RkNTOzF9qcchjo3Won3l4dgUFwSNp</Url>
-          <NewWindow>true</NewWindow>
-          <ImageUrl />
-          <SubItems />
-        </ContentItem>
       </Items>
       <Location>Top</Location>
       <IsFullWidthRow>true</IsFullWidthRow>
