@@ -1248,7 +1248,7 @@
       <IsHalfWidth>true</IsHalfWidth>
       <IsCarouselThreeCols>false</IsCarouselThreeCols>
       <IframeSrc>https://esa.ntpc.edu.tw/web-heromgt/rest/service/view/public/WVFYTWN4Zy9GRlBrTDlkSEJZUmRnakZFRVBkNlhhUXRDT210ZE9yeFZOND0</IframeSrc>
-      <IframeHeight>300</IframeHeight>
+      <IframeHeight>550</IframeHeight>
       <IframeTitle>榮譽榜</IframeTitle>
       <HtmlContent>&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-TW"&gt;
@@ -1419,7 +1419,7 @@
       <IsHalfWidth>true</IsHalfWidth>
       <IsCarouselThreeCols>false</IsCarouselThreeCols>
       <IframeSrc>https://esa.ntpc.edu.tw/web-announce/rest/service/view/public/OFJQdXFmQXJyaTF1WTR3YytNaC9iQTN4WW1nWWc3UGdObXorOU4rRVVYdz0</IframeSrc>
-      <IframeHeight>300</IframeHeight>
+      <IframeHeight>550</IframeHeight>
       <IframeTitle>行政公告</IframeTitle>
       <HtmlContent>&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-TW"&gt;
@@ -1592,7 +1592,7 @@
       <IsHalfWidth>false</IsHalfWidth>
       <IsCarouselThreeCols>false</IsCarouselThreeCols>
       <IframeSrc>https://web.ntpc.edu.tw/p/426-1000-1.php?Lang=zh-tw</IframeSrc>
-      <IframeHeight>300</IframeHeight>
+      <IframeHeight>150</IframeHeight>
       <IframeTitle>新北市教育局活動宣導</IframeTitle>
       <HtmlContent>&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-TW"&gt;
