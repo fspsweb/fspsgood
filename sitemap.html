@@ -313,7 +313,7 @@
 <div class="banner-container" style="width:100%; max-width:100%;"><img src="images/slide01.png" alt="學校橫幅圖片" class="banner-img" style="width:100%; height:auto; display:block; object-fit:cover; max-height:400px;" /></div>
 <div class="sitemap-wrapper">
 <a href="#ac" id="ac" accesskey="C" title="主要內容區" class="access-key">:::</a>
-<div class="breadcrumb" style="margin-bottom:20px; color:#666;"><a href="index.html" data-title="回到首頁" style="text-decoration: none;"> 首頁</a> &gt; <span aria-current="page">網站導覽</span></div>
+<div class="breadcrumb" style="margin-bottom:20px; color:#666;"><a href="index.html" data-title="回到首頁" style="text-decoration: none;">首頁</a> &gt; <span aria-current="page">網站導覽</span></div>
 <h1 class="sitemap-title">網站導覽</h1>
 <div class="accesskey-info">
 <h2>快速鍵操作說明</h2>
@@ -325,7 +325,6 @@
 <li><span class="accesskey-code">Alt + R</span>：右側區塊，呈現相關連結選單。</li>
 <li><span class="accesskey-code">Alt + B</span>：下方功能區，此區塊呈現聯絡方式等資訊。</li>
 </ul>
-<p style="margin-top:10px; font-size:0.9em; color:#666;">※ 註：Firefox 請搭配 Alt+Shift 使用。</p>
 </div>
 <div class="sitemap-content">
 <div id="no-result-msg">查無相關資料，請嘗試其他關鍵字。</div>
@@ -404,11 +403,6 @@
 <li><a href="https://sites.google.com/fsps.ntpc.edu.tw/backup/%E6%95%B8%E4%BD%8D%E5%AD%B8%E7%BF%92" target="_blank" class="node-sub-link" data-title="數位學習 (另開新視窗)">數位學習 (另開新視窗)</a></li>
 </ul></li>
 <li>
-<span class="node-link" style="cursor:default; color:#333; background:none;">臨時性公告</span>
-<ul class="sitemap-third-tree">
-<li><a href="https://drive.google.com/file/d/1znb-k-jOBwTe5DRXFFA4eOeUxyRl_s2F/view?usp=drive_link" target="_blank" class="node-sub-link" data-title="115年春節運動場開放時間 (另開新視窗)">115年春節運動場開放時間 (另開新視窗)</a></li>
-</ul></li>
-<li>
 <span class="node-link" style="cursor:default; color:#333; background:none;">專區連結公告</span>
 <ul class="sitemap-third-tree">
 <li><a href="https://drive.google.com/file/d/1m_oyRg8oq-pwrMm7XOB0UBI5lfevsEOe/view?usp=drive_link" target="_blank" class="node-sub-link" data-title="校園運動場開放時間 (另開新視窗)">校園運動場開放時間 (另開新視窗)</a></li>
@@ -482,42 +476,28 @@
                 var msg = document.getElementById('no-result-msg');
                 var foundCount = 0;
 
-                // 1. 先全部隱藏
-                for (var i = 0; i < lis.length; i++) {
-                    lis[i].style.display = 'none';
-                }
+                for (var i = 0; i < lis.length; i++) lis[i].style.display = 'none';
 
                 if (filter === '') {
-                    // 空值：全部顯示
                     for (var i = 0; i < lis.length; i++) lis[i].style.display = 'block';
                     msg.style.display = 'none';
                     return;
                 }
 
-                // 2. 搜尋符合的連結
                 var links = tree.getElementsByTagName('a');
                 for (var i = 0; i < links.length; i++) {
                     var link = links[i];
                     var txt = link.textContent || link.innerText;
                     if (txt.toLowerCase().indexOf(filter) > -1) {
-                        // 找到符合的連結，將其所有父層 li 顯示出來
-                        var p = link.parentElement; // li
+                        var p = link.parentElement;
                         while (p && p !== tree) {
-                            if (p.tagName === 'LI') {
-                                p.style.display = 'block';
-                                // 讓該 li 下的直接子 ul 也顯示 (如果有的話)
-                                var childUl = p.querySelector('ul');
-                                if(childUl) {
-                                    // 這裡可以選擇是否展開所有子層，目前邏輯是只要父層顯示，子層結構會在
-                                }
-                            }
+                            if (p.tagName === 'LI') p.style.display = 'block';
                             p = p.parentElement;
                         }
                         foundCount++;
                     }
                 }
                 
-                // 3. 處理純文字節點 (如區塊標題 span)
                 var spans = tree.getElementsByTagName('span');
                 for (var i = 0; i < spans.length; i++) {
                     var txt = spans[i].textContent || spans[i].innerText;
@@ -531,15 +511,9 @@
                     }
                 }
 
-                // 4. 顯示/隱藏 無資料訊息
-                if (foundCount === 0) {
-                    msg.style.display = 'block';
-                } else {
-                    msg.style.display = 'none';
-                }
+                if (foundCount === 0) msg.style.display = 'block'; else msg.style.display = 'none';
             }
 
-            // 初始化：檢查網址參數 ?q=...
             window.onload = function() {
                 var urlParams = new URLSearchParams(window.location.search);
                 var q = urlParams.get('q');
