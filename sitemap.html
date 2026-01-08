@@ -13,13 +13,13 @@
     .access-key { color: #fff; text-decoration: none; font-size: 0.9em; padding: 0 5px; cursor: help; }
     .access-key:focus { outline: 2px solid yellow; color: #fff; }
     
-    /* ★★★ 修改：最上方導覽列 (Top Nav) - 靠右對齊 ★★★ */
+    /* 上方導覽列 (Top Nav) - 靠右對齊 */
     .top-nav { 
         background-color: #6A5ACD; 
         color: #fff; 
         padding: 5px 20px; 
         display: flex; 
-        justify-content: flex-end; /* 全部內容靠右 */
+        justify-content: flex-end; 
         align-items: center; 
         font-size: 0.95em; 
     }
@@ -27,7 +27,7 @@
     /* 導覽列連結群組 */
     .top-nav-items { 
         display: flex; 
-        gap: 15px; /* 項目之間的間距 */
+        gap: 15px; 
         align-items: center; 
     }
     
@@ -93,8 +93,9 @@
     .block-card > *:last-child { margin-bottom: 0 !important; }
     h2.block-title { font-size: 1.5em; border-bottom: 2px solid #ccc; padding-bottom: 0.1em; margin-bottom: 8px; margin-top: 0; }
     
-    /* 提示文字 Tooltip 樣式 */
+    /* ★★★ 修正重點：提示文字 Tooltip 樣式 ★★★ */
     [data-title] { position: relative; }
+    [data-title]:hover { z-index: 1000; } /* 新增這行：讓被滑過的連結浮到最上層，避免被下方內容遮住 */
     [data-title]:hover::after { content: attr(data-title); position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background-color: #fff; color: #333; border: 1px solid #ccc; box-shadow: 0 4px 10px rgba(0,0,0,0.2); padding: 6px 12px; border-radius: 4px; white-space: nowrap; font-size: 0.9em; z-index: 99999; pointer-events: none; margin-top: 8px; }
     [data-title]:hover::before { content: ''; position: absolute; top: 100%; left: 50%; margin-left: -6px; margin-top: -4px; border-width: 6px; border-style: solid; border-color: transparent transparent #fff transparent; z-index: 99999; }
     
@@ -173,7 +174,7 @@
         .col-left, .col-center, .col-right { width: 100%; order: 0; flex: 1 1 100%; }
         .col-center { order: 1; } .col-left { order: 2; } .col-right { order: 3; }
         .sitemap-list { flex-direction: column; }
-        .top-nav { display: none; } /* 手機版隱藏上方條，節省空間 */
+        .top-nav { display: none; } 
     }
 
     /* 處室介紹按鈕與內容樣式 */
@@ -332,7 +333,6 @@
 <li>
 <span class="node-h1">主要選單</span>
 <ul class="sitemap-sub-tree">
-<li><a href="index.html" class="node-link" data-title="回首頁">回首頁</a></li>
 <li>
 <a href="#" target="_self" class="node-link" data-title="認識復興">認識復興</a>
 <ul class="sitemap-third-tree">
@@ -401,6 +401,11 @@
 <li><a href="https://sites.google.com/fsps.ntpc.edu.tw/backup/%E5%AE%B6%E9%95%B7%E5%B0%88%E5%8D%80" target="_blank" class="node-sub-link" data-title="家長專區 (另開新視窗)">家長專區 (另開新視窗)</a></li>
 <li><a href="https://sites.google.com/fsps.ntpc.edu.tw/learnfsps/%E9%A6%96%E9%A0%81" target="_blank" class="node-sub-link" data-title="設備報修 (另開新視窗)">設備報修 (另開新視窗)</a></li>
 <li><a href="https://sites.google.com/fsps.ntpc.edu.tw/backup/%E6%95%B8%E4%BD%8D%E5%AD%B8%E7%BF%92" target="_blank" class="node-sub-link" data-title="數位學習 (另開新視窗)">數位學習 (另開新視窗)</a></li>
+</ul></li>
+<li>
+<span class="node-link" style="cursor:default; color:#333; background:none;">臨時性公告</span>
+<ul class="sitemap-third-tree">
+<li><a href="https://drive.google.com/file/d/1znb-k-jOBwTe5DRXFFA4eOeUxyRl_s2F/view?usp=drive_link" target="_blank" class="node-sub-link" data-title="115年春節運動場開放時間 (另開新視窗)">115年春節運動場開放時間 (另開新視窗)</a></li>
 </ul></li>
 <li>
 <span class="node-link" style="cursor:default; color:#333; background:none;">專區連結公告</span>

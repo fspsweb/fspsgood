@@ -13,13 +13,13 @@
     .access-key { color: #fff; text-decoration: none; font-size: 0.9em; padding: 0 5px; cursor: help; }
     .access-key:focus { outline: 2px solid yellow; color: #fff; }
     
-    /* ★★★ 修改：最上方導覽列 (Top Nav) - 靠右對齊 ★★★ */
+    /* 上方導覽列 (Top Nav) - 靠右對齊 */
     .top-nav { 
         background-color: #6A5ACD; 
         color: #fff; 
         padding: 5px 20px; 
         display: flex; 
-        justify-content: flex-end; /* 全部內容靠右 */
+        justify-content: flex-end; 
         align-items: center; 
         font-size: 0.95em; 
     }
@@ -27,7 +27,7 @@
     /* 導覽列連結群組 */
     .top-nav-items { 
         display: flex; 
-        gap: 15px; /* 項目之間的間距 */
+        gap: 15px; 
         align-items: center; 
     }
     
@@ -93,8 +93,9 @@
     .block-card > *:last-child { margin-bottom: 0 !important; }
     h2.block-title { font-size: 1.5em; border-bottom: 2px solid #ccc; padding-bottom: 0.1em; margin-bottom: 8px; margin-top: 0; }
     
-    /* 提示文字 Tooltip 樣式 */
+    /* ★★★ 修正重點：提示文字 Tooltip 樣式 ★★★ */
     [data-title] { position: relative; }
+    [data-title]:hover { z-index: 1000; } /* 新增這行：讓被滑過的連結浮到最上層，避免被下方內容遮住 */
     [data-title]:hover::after { content: attr(data-title); position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background-color: #fff; color: #333; border: 1px solid #ccc; box-shadow: 0 4px 10px rgba(0,0,0,0.2); padding: 6px 12px; border-radius: 4px; white-space: nowrap; font-size: 0.9em; z-index: 99999; pointer-events: none; margin-top: 8px; }
     [data-title]:hover::before { content: ''; position: absolute; top: 100%; left: 50%; margin-left: -6px; margin-top: -4px; border-width: 6px; border-style: solid; border-color: transparent transparent #fff transparent; z-index: 99999; }
     
@@ -173,7 +174,7 @@
         .col-left, .col-center, .col-right { width: 100%; order: 0; flex: 1 1 100%; }
         .col-center { order: 1; } .col-left { order: 2; } .col-right { order: 3; }
         .sitemap-list { flex-direction: column; }
-        .top-nav { display: none; } /* 手機版隱藏上方條，節省空間 */
+        .top-nav { display: none; } 
     }
 
     /* 處室介紹按鈕與內容樣式 */
@@ -330,12 +331,34 @@
 </ul>
 </div>
 </div></div>
+<div style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; gap: 20px; width: 100%; margin-bottom: 10px; overflow-x: auto; scrollbar-width: none;">
+<div style="flex: 1 1 0px !important; min-width: 0 !important; display: flex; flex-direction: column;">
+<div class="block-card">
+<h2 class="block-title" style="color: #FFFFFF; background-color: #6A5ACD; padding: 10px 15px; border-radius: 5px; text-align: center;" tabindex="-1">臨時性公告</h2>
+<div class="carousel-container" id="carousel-C14a9d0ea" data-cols="1">
+<button type="button" class="pause-btn" onclick="togglePause('C14a9d0ea')" aria-label="暫停輪播">II 暫停</button>
+<ul class="carousel-list">
+<li class="carousel-item">
+<a href="https://drive.google.com/file/d/1znb-k-jOBwTe5DRXFFA4eOeUxyRl_s2F/view?usp=drive_link" target="_blank" data-title="115年春節運動場開放時間 (另開新視窗)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; color: inherit; height: 100%;">
+<img src="images/1150108.jpg" alt="" style="width: 100%; height: 180px; object-fit: contain; border-radius: 4px; display: block; background: transparent;" />
+<div class="carousel-caption">115年春節運動場開放時間</div>
+</a>
+</li>
+</ul>
+<button type="button" class="control-btn prev" onclick="moveSlide(-1, 'C14a9d0ea')" aria-label="上一組內容">❮</button>
+<button type="button" class="control-btn next" onclick="moveSlide(1, 'C14a9d0ea')" aria-label="下一組內容">❯</button>
+<div class="dots-container"></div>
+</div>
+<script>document.addEventListener('DOMContentLoaded', function() { initCarousel('C14a9d0ea'); });</script>
+</div>
+</div>
+</div>
 <div class="full-width-row" style="display: block !important; width: 100% !important; margin-bottom: 10px;"><div style="width: 100%;">
 <div class="block-card">
-<div class="marquee-container" id="mq-c5469947" role="region" aria-label="跑馬燈">
+<div class="marquee-container" id="mq-77faa4db" role="region" aria-label="跑馬燈">
 <div class="marquee-controls">
 <span class="sr-only">跑馬燈</span>
-<button class="marquee-btn" onclick="toggleMarquee('mq-c5469947')" aria-label="暫停跑馬燈">||</button></div>
+<button class="marquee-btn" onclick="toggleMarquee('mq-77faa4db')" aria-label="暫停跑馬燈">||</button></div>
 <div class="marquee-content-wrapper"><div class="marquee-track">
 <span class="marquee-item" tabindex="0">本校參加「新北市114年度中區英語歌曲演唱競賽」成績優異：六年3班榮獲特優(參加市賽)、二年8班與四年11班榮獲優等！感謝各位指導老師辛勞</span>
 <span class="marquee-item" tabindex="0">賀！本校參加 第40屆生達盃全國桌球錦標賽 成績優異</span>
@@ -354,8 +377,8 @@
 </a>
 </li>
 <li class="link-list-entry" style="width: 165px;">
-<button type="button" class="accordion-btn" aria-expanded="false" aria-controls="acc-79d5d7d2" onclick="toggleAccordion(this)" title="展開/收合 校園運動場開放辦法"><span class="acc-title">校園運動場開放辦法</span><span class="acc-icon">▼</span></button>
-<ul id="acc-79d5d7d2" class="accordion-panel" hidden>
+<button type="button" class="accordion-btn" aria-expanded="false" aria-controls="acc-7f2cc6d5" onclick="toggleAccordion(this)" title="展開/收合 校園運動場開放辦法"><span class="acc-title">校園運動場開放辦法</span><span class="acc-icon">▼</span></button>
+<ul id="acc-7f2cc6d5" class="accordion-panel" hidden>
 <li class="sub-link-item"><a href="https://drive.google.com/drive/folders/1s08dbUBKP4bk1oCDTFNuy0rehGJ_P2sh" target="_blank" data-title="場地租借法規 (另開新視窗)">場地租借法規</a></li>
 <li class="sub-link-item"><a href="https://drive.google.com/drive/folders/1H97RkNTOzF9qcchjo3Won3l4dgUFwSNp" target="_blank" data-title="場地租借表格 (另開新視窗)">場地租借表格</a></li>
 </ul>
@@ -451,8 +474,8 @@
 <div style="flex: 1 1 0px !important; min-width: 0 !important; display: flex; flex-direction: column;">
 <div class="block-card">
 <h2 class="block-title" id="blk-bottom-0" style="color: #FFFFFF; background-color: #6A5ACD; padding: 10px 15px; border-radius: 5px; text-align: center;" tabindex="-1">活動花絮</h2>
-<div class="carousel-container" id="carousel-C4b7711f3" data-cols="1">
-<button type="button" class="pause-btn" onclick="togglePause('C4b7711f3')" aria-label="暫停輪播">II 暫停</button>
+<div class="carousel-container" id="carousel-Ce052cd59" data-cols="1">
+<button type="button" class="pause-btn" onclick="togglePause('Ce052cd59')" aria-label="暫停輪播">II 暫停</button>
 <ul class="carousel-list">
 <li class="carousel-item">
 <a href="https://www.youtube.com/playlist?list=PLV8xz2yaa1LIuGNJq9uEh7Kcp1sBbrTzS" target="_blank" data-title="114學年度復興國小47週年學校運動會校慶 (另開新視窗)" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; color: inherit; height: 100%;">
@@ -467,11 +490,11 @@
 </a>
 </li>
 </ul>
-<button type="button" class="control-btn prev" onclick="moveSlide(-1, 'C4b7711f3')" aria-label="上一組內容">❮</button>
-<button type="button" class="control-btn next" onclick="moveSlide(1, 'C4b7711f3')" aria-label="下一組內容">❯</button>
+<button type="button" class="control-btn prev" onclick="moveSlide(-1, 'Ce052cd59')" aria-label="上一組內容">❮</button>
+<button type="button" class="control-btn next" onclick="moveSlide(1, 'Ce052cd59')" aria-label="下一組內容">❯</button>
 <div class="dots-container"></div>
 </div>
-<script>document.addEventListener('DOMContentLoaded', function() { initCarousel('C4b7711f3'); });</script>
+<script>document.addEventListener('DOMContentLoaded', function() { initCarousel('Ce052cd59'); });</script>
 </div>
 </div>
 <div style="flex: 1 1 0px !important; min-width: 0 !important; display: flex; flex-direction: column;">
