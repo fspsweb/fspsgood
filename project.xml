@@ -412,7 +412,7 @@
       <SectionTitleBackgroundColor>#6A5ACD</SectionTitleBackgroundColor>
       <IsTitleHidden>false</IsTitleHidden>
       <IsTitleCentered>true</IsTitleCentered>
-      <IsBlockHidden>false</IsBlockHidden>
+      <IsBlockHidden>true</IsBlockHidden>
       <IsHalfWidth>false</IsHalfWidth>
       <IsCarouselThreeCols>false</IsCarouselThreeCols>
       <IframeSrc />
