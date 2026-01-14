@@ -7,16 +7,17 @@
   <BannerTitleEn>New Taipei City Fu-Sing Elementary School</BannerTitleEn>
   <BannerImageUrl>images/slide01.png</BannerImageUrl>
   <BannerImageAlt>學校橫幅圖片</BannerImageAlt>
-  <FooterText>© 2025 新北市中和區復興國民小學 版權所有&lt;br&gt;
-地址：235047新北市中和區復興路301巷6號&lt;br&gt;
+  <FooterText>地址：235047新北市中和區復興路301巷6號&lt;br&gt;
 電話：&lt;a href="https://sites.google.com/fsps.ntpc.edu.tw/backup/%E8%AA%8D%E8%AD%98%E5%BE%A9%E8%88%88/%E5%AD%B8%E6%A0%A1%E5%88%86%E6%A9%9F?authuser=0"  target="_blank" style="color:#fff; text-decoration:underline;" data-title="撥打電話(另開視窗)" alt="撥打電話(另開視窗)" &gt;02-2247-8829&lt;/a&gt; | 傳真：02-2245-2802&lt;br&gt;
 網站管理者信箱：&lt;a href="mailto:mis@fsps.ntpc.edu.tw" style="color:#fff; text-decoration:underline;" data-title="寄信"&gt;mis@fsps.ntpc.edu.tw&lt;/a&gt;&lt;br&gt;
 統一編號：34322846 | 機關代碼：382082000Y&lt;br&gt;
 
 &lt;a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20251212145914" title="無障礙網站"&gt;
     &lt;img src="images/a.png" border="0" width="88" height="31" alt="通過A無障礙網頁檢測" /&gt;
-    &lt;/a&gt;</FooterText>
+    &lt;/a&gt;
+</FooterText>
   <FooterAlign>center</FooterAlign>
+  <FooterCopyright>@2025 新北市中和區復興國民小學 版權所有</FooterCopyright>
   <CurrentTheme>ElegantPurple</CurrentTheme>
   <NavbarColor>#6A5ACD</NavbarColor>
   <NavbarItems>
