@@ -20,7 +20,7 @@
   <FooterCopyright>@2025 新北市中和區復興國民小學 版權所有</FooterCopyright>
   <CurrentTheme>ElegantPurple</CurrentTheme>
   <NavbarColor>#6A5ACD</NavbarColor>
-  <IsNavbarCentered>true</IsNavbarCentered>
+  <IsNavbarCentered>false</IsNavbarCentered>
   <NavbarItems>
     <NavbarItem>
       <Title>認識復興</Title>
@@ -350,6 +350,7 @@
       <TitleImageUrl />
       <TitleImageAlt />
       <IsLinkListHorizontal>true</IsLinkListHorizontal>
+      <IsLinkListCentered>true</IsLinkListCentered>
       <Items>
         <ContentItem>
           <Title>學校粉絲頁</Title>
@@ -578,6 +579,7 @@
       <TitleImageUrl />
       <TitleImageAlt />
       <IsLinkListHorizontal>false</IsLinkListHorizontal>
+      <IsLinkListCentered>false</IsLinkListCentered>
       <Items>
         <ContentItem>
           <Title>115年春節運動場開放時間</Title>
@@ -757,6 +759,7 @@
       <TitleImageUrl />
       <TitleImageAlt />
       <IsLinkListHorizontal>false</IsLinkListHorizontal>
+      <IsLinkListCentered>false</IsLinkListCentered>
       <Items>
         <ContentItem>
           <Title>本校參加「新北市114年度英語歌曲演唱競賽」成績優異：六年3班榮獲市賽優等區賽特優、二年8班與四年11班榮獲區賽優等！感謝各位指導老師辛勞~</Title>
@@ -957,6 +960,7 @@
       <TitleImageUrl />
       <TitleImageAlt />
       <IsLinkListHorizontal>true</IsLinkListHorizontal>
+      <IsLinkListCentered>true</IsLinkListCentered>
       <Items>
         <ContentItem>
           <Title>校園運動場開放時間</Title>
@@ -1237,6 +1241,7 @@
       <TitleImageUrl />
       <TitleImageAlt />
       <IsLinkListHorizontal>false</IsLinkListHorizontal>
+      <IsLinkListCentered>false</IsLinkListCentered>
       <Items />
       <Location>Left</Location>
       <IsFullWidthRow>true</IsFullWidthRow>
@@ -1410,6 +1415,7 @@
       <TitleImageUrl>images/honor.png</TitleImageUrl>
       <TitleImageAlt>榮譽榜</TitleImageAlt>
       <IsLinkListHorizontal>false</IsLinkListHorizontal>
+      <IsLinkListCentered>false</IsLinkListCentered>
       <Items />
       <Location>Center</Location>
       <IsFullWidthRow>true</IsFullWidthRow>
@@ -1581,6 +1587,7 @@
       <TitleImageUrl>images/news.png</TitleImageUrl>
       <TitleImageAlt>行政公告</TitleImageAlt>
       <IsLinkListHorizontal>false</IsLinkListHorizontal>
+      <IsLinkListCentered>false</IsLinkListCentered>
       <Items />
       <Location>Center</Location>
       <IsFullWidthRow>true</IsFullWidthRow>
@@ -1754,6 +1761,7 @@
       <TitleImageUrl />
       <TitleImageAlt />
       <IsLinkListHorizontal>false</IsLinkListHorizontal>
+      <IsLinkListCentered>false</IsLinkListCentered>
       <Items />
       <Location>Right</Location>
       <IsFullWidthRow>true</IsFullWidthRow>
@@ -1927,6 +1935,7 @@
       <TitleImageUrl />
       <TitleImageAlt />
       <IsLinkListHorizontal>false</IsLinkListHorizontal>
+      <IsLinkListCentered>false</IsLinkListCentered>
       <Items>
         <ContentItem>
           <Title>114學年度復興國小47週年學校運動會校慶</Title>
@@ -2113,6 +2122,7 @@
       <TitleImageUrl />
       <TitleImageAlt />
       <IsLinkListHorizontal>false</IsLinkListHorizontal>
+      <IsLinkListCentered>false</IsLinkListCentered>
       <Items>
         <ContentItem>
           <Title>數位讀寫網</Title>
