@@ -419,7 +419,7 @@
       <SectionTitleBackgroundColor>#6A5ACD</SectionTitleBackgroundColor>
       <IsTitleHidden>false</IsTitleHidden>
       <IsTitleCentered>true</IsTitleCentered>
-      <IsBlockHidden>true</IsBlockHidden>
+      <IsBlockHidden>false</IsBlockHidden>
       <IsHalfWidth>false</IsHalfWidth>
       <IsCarouselThreeCols>false</IsCarouselThreeCols>
       <IframeSrc />
@@ -583,9 +583,10 @@
       <Items>
         <ContentItem>
           <Title>115年春節運動場開放時間</Title>
-          <Url>https://drive.google.com/file/d/1znb-k-jOBwTe5DRXFFA4eOeUxyRl_s2F/view?usp=drive_link</Url>
+          <Url>https://drive.google.com/file/d/1PgKC1ps7FV9iOY0p4lmEjR28g4ZMYa26/view?usp=drive_link</Url>
           <NewWindow>true</NewWindow>
           <ImageUrl>images/1150108.jpg</ImageUrl>
+          <ImageAlt />
           <SubItems />
         </ContentItem>
       </Items>
