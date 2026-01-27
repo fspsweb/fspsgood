@@ -350,7 +350,7 @@
       <TitleImageUrl />
       <TitleImageAlt />
       <IsLinkListHorizontal>true</IsLinkListHorizontal>
-      <IsLinkListCentered>true</IsLinkListCentered>
+      <IsLinkListCentered>false</IsLinkListCentered>
       <Items>
         <ContentItem>
           <Title>學校粉絲頁</Title>
@@ -961,7 +961,7 @@
       <TitleImageUrl />
       <TitleImageAlt />
       <IsLinkListHorizontal>true</IsLinkListHorizontal>
-      <IsLinkListCentered>true</IsLinkListCentered>
+      <IsLinkListCentered>false</IsLinkListCentered>
       <Items>
         <ContentItem>
           <Title>校園運動場開放時間</Title>
