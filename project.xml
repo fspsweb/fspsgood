@@ -20,7 +20,7 @@
   <FooterCopyright>@2025 新北市中和區復興國民小學 版權所有</FooterCopyright>
   <CurrentTheme>ElegantPurple</CurrentTheme>
   <NavbarColor>#6A5ACD</NavbarColor>
-  <IsNavbarCentered>false</IsNavbarCentered>
+  <IsNavbarCentered>true</IsNavbarCentered>
   <NavbarItems>
     <NavbarItem>
       <Title>認識復興</Title>
