@@ -350,7 +350,7 @@
       <TitleImageUrl />
       <TitleImageAlt />
       <IsLinkListHorizontal>true</IsLinkListHorizontal>
-      <IsLinkListCentered>false</IsLinkListCentered>
+      <IsLinkListCentered>true</IsLinkListCentered>
       <Items>
         <ContentItem>
           <Title>學校粉絲頁</Title>
