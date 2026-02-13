@@ -357,13 +357,15 @@
           <Url>https://www.facebook.com/Fspsntpc/</Url>
           <NewWindow>true</NewWindow>
           <ImageUrl>images/1.png</ImageUrl>
+          <ImageAlt>學校粉絲頁</ImageAlt>
           <SubItems />
         </ContentItem>
         <ContentItem>
           <Title>課程計畫</Title>
-          <Url>https://drive.google.com/drive/u/0/folders/1vtAXoLSRns4hilQCz6AW-kWWWCHqT7oe</Url>
+          <Url>https://drive.google.com/drive/u/2/folders/1zFKGUNqRMKqbTokzjtNYm9pq1PyL9mnR</Url>
           <NewWindow>true</NewWindow>
           <ImageUrl>images/2.png</ImageUrl>
+          <ImageAlt>課程計畫</ImageAlt>
           <SubItems />
         </ContentItem>
         <ContentItem>
@@ -371,6 +373,7 @@
           <Url>https://drive.google.com/file/d/1KearFYHdaFgc3Dtj88MRkWgUCZ5ylCvL/view</Url>
           <NewWindow>true</NewWindow>
           <ImageUrl>images/3.png</ImageUrl>
+          <ImageAlt>教科書版本</ImageAlt>
           <SubItems />
         </ContentItem>
         <ContentItem>
@@ -378,6 +381,7 @@
           <Url>https://sites.google.com/fsps.ntpc.edu.tw/backup/%E5%BE%A9%E8%88%88%E6%A0%A1%E5%8B%99%E5%B7%A5%E4%BD%9C</Url>
           <NewWindow>true</NewWindow>
           <ImageUrl>images/4.png</ImageUrl>
+          <ImageAlt>復興校務工作</ImageAlt>
           <SubItems />
         </ContentItem>
         <ContentItem>
@@ -385,6 +389,7 @@
           <Url>https://sites.google.com/fsps.ntpc.edu.tw/backup/%E8%AA%8D%E8%AD%98%E5%BE%A9%E8%88%88/%E5%AD%B8%E6%A0%A1%E5%88%86%E6%A9%9F</Url>
           <NewWindow>true</NewWindow>
           <ImageUrl>images/5.png</ImageUrl>
+          <ImageAlt>處室分機</ImageAlt>
           <SubItems />
         </ContentItem>
         <ContentItem>
@@ -392,6 +397,7 @@
           <Url>https://sites.google.com/fsps.ntpc.edu.tw/backup/%E5%AE%B6%E9%95%B7%E5%B0%88%E5%8D%80</Url>
           <NewWindow>true</NewWindow>
           <ImageUrl>images/6.png</ImageUrl>
+          <ImageAlt>家長專區</ImageAlt>
           <SubItems />
         </ContentItem>
         <ContentItem>
@@ -399,6 +405,7 @@
           <Url>https://sites.google.com/fsps.ntpc.edu.tw/learnfsps/%E9%A6%96%E9%A0%81</Url>
           <NewWindow>true</NewWindow>
           <ImageUrl>images/7.png</ImageUrl>
+          <ImageAlt>設備報修</ImageAlt>
           <SubItems />
         </ContentItem>
         <ContentItem>
@@ -406,6 +413,7 @@
           <Url>https://sites.google.com/fsps.ntpc.edu.tw/backup/%E6%95%B8%E4%BD%8D%E5%AD%B8%E7%BF%92</Url>
           <NewWindow>true</NewWindow>
           <ImageUrl>images/8.png</ImageUrl>
+          <ImageAlt>數位學習</ImageAlt>
           <SubItems />
         </ContentItem>
       </Items>
@@ -977,7 +985,7 @@
       <TitleImageUrl />
       <TitleImageAlt />
       <IsLinkListHorizontal>true</IsLinkListHorizontal>
-      <IsLinkListCentered>true</IsLinkListCentered>
+      <IsLinkListCentered>false</IsLinkListCentered>
       <Items>
         <ContentItem>
           <Title>校園運動場開放時間</Title>
@@ -1084,6 +1092,14 @@
           <Url>https://sites.google.com/fsps.ntpc.edu.tw/111fsps-parenting-education/%E5%AE%B6%E5%BA%AD%E6%95%99%E8%82%B2%E4%B8%AD%E5%BF%83%E7%B6%B2%E7%AB%99</Url>
           <NewWindow>true</NewWindow>
           <ImageUrl>images/21.png</ImageUrl>
+          <SubItems />
+        </ContentItem>
+        <ContentItem>
+          <Title>新北市課程計畫網</Title>
+          <Url>https://rrcp.ntpc.edu.tw/</Url>
+          <NewWindow>true</NewWindow>
+          <ImageUrl>images/22.png</ImageUrl>
+          <ImageAlt>新北市課程計畫網</ImageAlt>
           <SubItems />
         </ContentItem>
       </Items>
