@@ -1292,7 +1292,7 @@
       <IsBlockHidden>false</IsBlockHidden>
       <IsHalfWidth>true</IsHalfWidth>
       <IsCarouselThreeCols>false</IsCarouselThreeCols>
-      <IframeSrc>https://esa.ntpc.edu.tw/web-heromgt/rest/service/view/public/WVFYTWN4Zy9GRlBrTDlkSEJZUmRnakZFRVBkNlhhUXRDT210ZE9yeFZOND0</IframeSrc>
+      <IframeSrc>https://esa.ntpc.edu.tw/web-heromgt/rest/service/view/public/bE5CSC9OdmxtT3lRL2FrYSszdkwzbTBBVUozV2xiTEVBWWUxcDI5MVVNTT0</IframeSrc>
       <IframeHeight>550</IframeHeight>
       <IframeTitle>榮譽榜</IframeTitle>
       <HtmlContent>&lt;!DOCTYPE html&gt;
@@ -1449,7 +1449,7 @@
       <TitleImageUrl>images/honor.png</TitleImageUrl>
       <TitleImageAlt>榮譽榜</TitleImageAlt>
       <IsLinkListHorizontal>false</IsLinkListHorizontal>
-      <IsLinkListCentered>false</IsLinkListCentered>
+      <IsLinkListCentered>true</IsLinkListCentered>
       <Items />
       <Location>Center</Location>
       <IsFullWidthRow>true</IsFullWidthRow>
@@ -1464,7 +1464,7 @@
       <IsBlockHidden>false</IsBlockHidden>
       <IsHalfWidth>true</IsHalfWidth>
       <IsCarouselThreeCols>false</IsCarouselThreeCols>
-      <IframeSrc>https://esa.ntpc.edu.tw/web-announce/rest/service/view/public/OFJQdXFmQXJyaTF1WTR3YytNaC9iQTN4WW1nWWc3UGdObXorOU4rRVVYdz0</IframeSrc>
+      <IframeSrc>https://esa.ntpc.edu.tw/web-announce/rest/service/view/public/ZmZrdi9CZkpGTkZMZ25VRFhIaVozUGZVMkhmempGRDRFemxUMTlDeU1VOD0</IframeSrc>
       <IframeHeight>550</IframeHeight>
       <IframeTitle>行政公告</IframeTitle>
       <HtmlContent>&lt;!DOCTYPE html&gt;
@@ -1621,7 +1621,7 @@
       <TitleImageUrl>images/news.png</TitleImageUrl>
       <TitleImageAlt>行政公告</TitleImageAlt>
       <IsLinkListHorizontal>false</IsLinkListHorizontal>
-      <IsLinkListCentered>false</IsLinkListCentered>
+      <IsLinkListCentered>true</IsLinkListCentered>
       <Items />
       <Location>Center</Location>
       <IsFullWidthRow>true</IsFullWidthRow>
