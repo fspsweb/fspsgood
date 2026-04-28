@@ -1118,6 +1118,14 @@
           <ImageAlt>新北市課程計畫網</ImageAlt>
           <SubItems />
         </ContentItem>
+        <ContentItem>
+          <Title>2026復興愛閱蝴蝶節</Title>
+          <Url>https://sites.google.com/fsps.ntpc.edu.tw/2026butterfly</Url>
+          <NewWindow>true</NewWindow>
+          <ImageUrl>images/23.png</ImageUrl>
+          <ImageAlt>復興愛閱蝴蝶節</ImageAlt>
+          <SubItems />
+        </ContentItem>
       </Items>
       <Location>Top</Location>
       <IsFullWidthRow>true</IsFullWidthRow>
