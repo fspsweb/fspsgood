@@ -436,7 +436,7 @@
       <IsTitleHidden>true</IsTitleHidden>
       <IsTitleCentered>true</IsTitleCentered>
       <IsBlockHidden>false</IsBlockHidden>
-      <IsHalfWidth>true</IsHalfWidth>
+      <IsHalfWidth>false</IsHalfWidth>
       <IsCarouselThreeCols>false</IsCarouselThreeCols>
       <IframeSrc />
       <IframeHeight>300</IframeHeight>
