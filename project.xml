@@ -436,7 +436,7 @@
       <IsTitleHidden>true</IsTitleHidden>
       <IsTitleCentered>true</IsTitleCentered>
       <IsBlockHidden>false</IsBlockHidden>
-      <IsHalfWidth>false</IsHalfWidth>
+      <IsHalfWidth>true</IsHalfWidth>
       <IsCarouselThreeCols>false</IsCarouselThreeCols>
       <IframeSrc />
       <IframeHeight>300</IframeHeight>
@@ -603,14 +603,6 @@
           <NewWindow>true</NewWindow>
           <ImageUrl>images/1150518.png</ImageUrl>
           <ImageAlt>114學年度畢典邀請函</ImageAlt>
-          <SubItems />
-        </ContentItem>
-        <ContentItem>
-          <Title>115新生報到說明連到報到網站</Title>
-          <Url>https://esa.ntpc.edu.tw/new/014634#!/%231#1</Url>
-          <NewWindow>true</NewWindow>
-          <ImageUrl>images/1150421.png</ImageUrl>
-          <ImageAlt>115新生報到說明</ImageAlt>
           <SubItems />
         </ContentItem>
       </Items>
