@@ -596,16 +596,7 @@
       <TitleImageAlt />
       <IsLinkListHorizontal>false</IsLinkListHorizontal>
       <IsLinkListCentered>false</IsLinkListCentered>
-      <Items>
-        <ContentItem>
-          <Title>畢典邀請函</Title>
-          <Url>https://drive.google.com/file/d/1P5g5Zpb6ly4jOBqpJLb434X1omNwM21m/view?usp=drive_link</Url>
-          <NewWindow>true</NewWindow>
-          <ImageUrl>images/1150518.png</ImageUrl>
-          <ImageAlt>114學年度畢典邀請函</ImageAlt>
-          <SubItems />
-        </ContentItem>
-      </Items>
+      <Items />
       <Location>Top</Location>
       <IsFullWidthRow>true</IsFullWidthRow>
     </ContentBlock>
