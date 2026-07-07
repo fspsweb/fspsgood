@@ -596,7 +596,16 @@
       <TitleImageAlt />
       <IsLinkListHorizontal>false</IsLinkListHorizontal>
       <IsLinkListCentered>false</IsLinkListCentered>
-      <Items />
+      <Items>
+        <ContentItem>
+          <Title>115暑假及開學重要日程</Title>
+          <Url>https://drive.google.com/file/d/1n67OZiAsG70xi6dEGOMUjgfd8Xu6EW1Z/view?usp=drive_link</Url>
+          <NewWindow>true</NewWindow>
+          <ImageUrl>images/1150702.png</ImageUrl>
+          <ImageAlt>115暑假及開學重要日程</ImageAlt>
+          <SubItems />
+        </ContentItem>
+      </Items>
       <Location>Top</Location>
       <IsFullWidthRow>true</IsFullWidthRow>
     </ContentBlock>
@@ -958,14 +967,6 @@
       <IsLinkListHorizontal>false</IsLinkListHorizontal>
       <IsLinkListCentered>false</IsLinkListCentered>
       <Items>
-        <ContentItem>
-          <Title>敬請支持農林漁牧業普查,115年4月10日至6月15日開放網路填報,網填可參加抽好禮,新北市政府感謝您的配合</Title>
-          <Url>#</Url>
-          <NewWindow>false</NewWindow>
-          <ImageUrl />
-          <ImageAlt />
-          <SubItems />
-        </ContentItem>
         <ContentItem>
           <Title>本校參加「新北市114年度英語歌曲演唱競賽」成績優異：六年3班榮獲市賽優等區賽特優、二年8班與四年11班榮獲區賽優等！感謝各位指導老師辛勞~</Title>
           <Url>#</Url>
