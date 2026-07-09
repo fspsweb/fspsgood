@@ -598,6 +598,14 @@
       <IsLinkListCentered>false</IsLinkListCentered>
       <Items>
         <ContentItem>
+          <Title>防颱</Title>
+          <Url>https://drive.google.com/file/d/1UKRTq9UfrqoFxR-4ofvhD620kqBwSP4e/view?usp=drive_link</Url>
+          <NewWindow>true</NewWindow>
+          <ImageUrl>images/1150709.png</ImageUrl>
+          <ImageAlt>防颱說明</ImageAlt>
+          <SubItems />
+        </ContentItem>
+        <ContentItem>
           <Title>115暑假及開學重要日程</Title>
           <Url>https://drive.google.com/file/d/1n67OZiAsG70xi6dEGOMUjgfd8Xu6EW1Z/view?usp=drive_link</Url>
           <NewWindow>true</NewWindow>
