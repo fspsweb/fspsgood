@@ -350,7 +350,7 @@
       <TitleImageUrl />
       <TitleImageAlt />
       <IsLinkListHorizontal>true</IsLinkListHorizontal>
-      <IsLinkListCentered>true</IsLinkListCentered>
+      <IsLinkListCentered>false</IsLinkListCentered>
       <Items>
         <ContentItem>
           <Title>學校粉絲頁</Title>
@@ -362,7 +362,7 @@
         </ContentItem>
         <ContentItem>
           <Title>課程計畫</Title>
-          <Url>https://drive.google.com/drive/u/2/folders/1zFKGUNqRMKqbTokzjtNYm9pq1PyL9mnR</Url>
+          <Url>https://drive.google.com/drive/folders/131c28ZiQkG9VJgyoOv_hge1KRSPmWOyN?usp=sharing</Url>
           <NewWindow>true</NewWindow>
           <ImageUrl>images/2.png</ImageUrl>
           <ImageAlt>課程計畫</ImageAlt>
