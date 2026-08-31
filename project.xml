@@ -49,11 +49,6 @@
           <NewWindow>true</NewWindow>
         </NavbarSubItem>
         <NavbarSubItem>
-          <Title>教師職務信箱</Title>
-          <Url>https://docs.google.com/document/d/1cN0FgpuEJ0QyBcvz_JzIRwc-8LZNBY_ffmZQ4P9bLYw/edit?tab=t.0</Url>
-          <NewWindow>true</NewWindow>
-        </NavbarSubItem>
-        <NavbarSubItem>
           <Title>復興大事紀</Title>
           <Url>https://esa.ntpc.edu.tw/jsp/schdata/schdata2.jsp?schno=014634</Url>
           <NewWindow>true</NewWindow>
@@ -968,31 +963,35 @@
       <IsLinkListCentered>false</IsLinkListCentered>
       <Items>
         <ContentItem>
-          <Title>本校參加「新北市114年度英語歌曲演唱競賽」成績優異：六年3班榮獲市賽優等區賽特優、二年8班與四年11班榮獲區賽優等！感謝各位指導老師辛勞~</Title>
+          <Title>本校榮獲「新北市114學年度學校數位轉型獎勵計畫－教育創新辦學獎</Title>
           <Url>#</Url>
           <NewWindow>false</NewWindow>
           <ImageUrl />
+          <ImageAlt />
           <SubItems />
         </ContentItem>
         <ContentItem>
-          <Title>賀！本校參加 第40屆生達盃全國桌球錦標賽 成績優異</Title>
+          <Title>本校參加 2026少年青少年桌球菁英賽 成績優異</Title>
           <Url>#</Url>
           <NewWindow>false</NewWindow>
           <ImageUrl />
+          <ImageAlt />
           <SubItems />
         </ContentItem>
         <ContentItem>
-          <Title>賀！本校參加 114年全國手球錦標賽 成績優異</Title>
+          <Title>本校參加 新北市115年各級學校國際多元文化語文競賽 成績優異</Title>
           <Url>#</Url>
           <NewWindow>false</NewWindow>
           <ImageUrl />
+          <ImageAlt />
           <SubItems />
         </ContentItem>
         <ContentItem>
-          <Title>賀！503班 蔡佾修 同學參加「114學年度全國學生美術比賽」表現卓越，榮獲佳績</Title>
+          <Title>本校參加 新北市115年度國民小學英語讀者劇場比賽中區區賽 成績優異</Title>
           <Url>#</Url>
           <NewWindow>false</NewWindow>
           <ImageUrl />
+          <ImageAlt />
           <SubItems />
         </ContentItem>
       </Items>
