@@ -591,7 +591,24 @@
       <TitleImageAlt />
       <IsLinkListHorizontal>false</IsLinkListHorizontal>
       <IsLinkListCentered>false</IsLinkListCentered>
-      <Items />
+      <Items>
+        <ContentItem>
+          <Title>1150905運動場暫停開放</Title>
+          <Url>https://drive.google.com/file/d/1OapTFrmKkO8XeGyogni3klxlRMEghuKS/view?usp=drive_link</Url>
+          <NewWindow>true</NewWindow>
+          <ImageUrl>images/1150905.png</ImageUrl>
+          <ImageAlt>1150905運動場暫停開放</ImageAlt>
+          <SubItems />
+        </ContentItem>
+        <ContentItem>
+          <Title>115家長日0918</Title>
+          <Url>https://drive.google.com/file/d/1v13EZC_EsA9A52LE9YXdVHWFtZGao9dh/view?usp=drive_link</Url>
+          <NewWindow>true</NewWindow>
+          <ImageUrl>images/115090401.jpg</ImageUrl>
+          <ImageAlt>115家長日0918</ImageAlt>
+          <SubItems />
+        </ContentItem>
+      </Items>
       <Location>Top</Location>
       <IsFullWidthRow>true</IsFullWidthRow>
     </ContentBlock>
